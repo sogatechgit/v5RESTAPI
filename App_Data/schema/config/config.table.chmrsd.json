@@ -1,0 +1,21 @@
+{
+  "tableName": "IMSA_TBL_CHD_CHEM_RSD",
+  "tableFieldPrefix": "CHD_CHEM_RSD_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBrsd",
+  "links": [],
+  "tableRowClass": "TblChemDBrsdRow",
+  "columns": [
+    {"name":"CHD_CHEM_RSD_ID","keyPosition": 0},
+    {"name":"CHD_CHEM_RSD_UPDATE_DATE","roles":"updated"},
+    {"name":"CHD_CHEM_RSD_GNAME","roles":"@lookupgroup=132"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_CHEM_RSD_ID"
+  },
+  "captions": {
+    "CHD_CHEM_RSD_ID": "ID"
+  },
+  "tableCode": "chmrsd",
+  "description": "Chemical Database RSD Collection"
+}

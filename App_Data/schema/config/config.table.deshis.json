@@ -1,0 +1,43 @@
+{
+    "tableName" : "IMSA_TBL_DESIGN_DATA_HISTORY",
+    "tableFieldPrefix":"DD_HIST_",
+    "tableClassFilename":"",
+    "tableClass":"TblDesignDataHistory",
+    "links":[],
+    "tableRowClass":"TblDesignDataHistoryRow",
+	"relations":[],
+    "columns": [
+        {"name":"DD_HIST_ID","keyPosition":0},
+		{"name":"DD_HIST_LOG_TYPE","roles":"@lookupgroup=188"},
+		{"name":"DD_HIST_ASSET_ID","roles":"@lookuptable=node"},
+		{"name":"DD_HIST_ASSET_FR","roles":"@lookuptable=node"},
+		{"name":"DD_HIST_ASSET_TO","roles":"@lookuptable=node"},
+		
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"DD_HIST_ID",
+		"assetField":"",
+		"recordTypeField":"",
+		"dataGroup":"DD_HIST_ASSET_ID",
+		"deletedFlagField":"",
+		"deletedDateStamp":"",
+		"deletedByStamp":"",
+		"updatedDateStamp":"",
+		"extraJoins":"",
+		"extraFields":"",
+		"gridColumns":
+			[
+				"DD_HIST_ASSET_ID|cap=Asset;mnw=150",
+				"DD_HIST_LOG_TYPE|cap=log Type;wd=90",
+				"DD_HIST_ASSET_FR|cap=Asset From;mnw=150",
+				"DD_HIST_ASSET_TO|cap=Asset To;mnw=150",
+				"DD_HIST_DESC|cap=Description;wd=150",
+				"DD_HIST_USERNAME|cap=User Name;wd=100",
+			],
+		"defaultValues": {}
+    },
+    "captions":{},
+    "tableCode":"deshis",
+    "description":"Design Data History Collection"
+}

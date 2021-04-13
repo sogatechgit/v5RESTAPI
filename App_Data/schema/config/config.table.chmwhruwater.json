@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_WHRU_WATER",
+  "tableFieldPrefix": "CHD_WHRU_WATER_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBwhruwater",
+  "links": [],
+  "tableRowClass": "TblChemDBwhruwaterRow",
+  "columns": [
+    {"name": "CHD_WHRU_WATER_ID","type": "Int64","keyPosition": 0},
+    {"name":"CHD_WHRU_WATER_UPDATE_DATE","type":"DateTime","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_WHRU_WATER_ID"
+  },
+  "captions": {
+    "CHD_WHRU_WATER_ID": "ID"
+  },
+  "tableCode": "chmwhruwater",
+  "description": "Chemical Database WHRU Water Collection"
+}

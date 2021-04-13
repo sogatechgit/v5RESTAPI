@@ -1,0 +1,18 @@
+{
+    "tableName" : "IMSA_SYS_LOCKS",
+    "tableFieldPrefix":"LOCK_",
+    "tableClassFilename":"",
+    "tableClass":"SysLocks",
+    "links":[],
+    "tableRowClass":"SysLocksRow",
+    "columns": [
+        {"name":"LOCK_ID","keyPosition":0},
+    ],
+    "clientConfig":{
+		"keyField":"LOCK_ID"
+    },
+    "captions":{
+    },
+    "tableCode":"lk",
+    "description":"Lock table"
+}

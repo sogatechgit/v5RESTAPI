@@ -1,0 +1,57 @@
+{
+    "tableName" : "IMSA_TBL_ANOM_ACT_ITEMS",
+    "tableFieldPrefix":"AI_",
+    "tableClassFilename":"",
+    "tableClass":"TblAnomaliesAction",
+    "tableRowClass":"TblAnomaliesActionRow",
+    "columns": [
+        {"name":"AI_ID","keyPosition":0},
+		{"name":"AI_STAT","roles":"@lookupgroup=152"},
+		{"name":"AI_PRIORITY","roles":"@lookupgroup=251"},
+		{"name":"AI_ACT_PARTY1","roles":"@lookuptable=users,usetext"},
+		{"name":"AI_ACT_PARTY2","roles":"@lookuptable=users,usetext"},
+		
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"AI_ID",
+		"subTable":{},
+
+		"dataGroup":"AI_AN_ID",		
+		
+		"createdDateStamp":"AI_RAISED_DATE",
+		"createdByStamp":"AI_RAISED_BY",
+		"updatedDateStamp":"AI_UPDATED_DATE",
+		"updatedByStamp":"AI_UPDATED_BY",
+		
+		"gridColumns":
+			[
+				"AI_REF_NO|cap=Ref.No.;center;wd=80",
+				"AI_TITLE|cap=Title;mnw=200",
+				"AI_ACT_PARTY1|cap=Action Party 1;wd=100",
+				"AI_ACT_PARTY2|cap=Action Party 2;wd=100",
+				"AI_TARGET_DATE|cap=Target Date;wd=80;center",
+				"AI_ACT_START_DATE|cap=Start Date;wd=80;center",
+				"AI_ACT_END_DATE|cap=End Date;wd=80;center",
+				"AI_MHOURS|cap=Manhours;wd=70;center",
+				"AI_STAT|cap=Status;wd=80",
+				"AI_RAISED_BY|cap=Raised By;wd=100",
+				"AI_RAISED_DATE|cap=Raised Date;wd=80;center",
+				"AI_UPDATED_BY|cap=Updated By;wd=100",
+				"AI_UPDATED_DATE|cap=Updated Date;wd=80;center",
+				"AI_PRIORITY|cap=Priority;wd=80;center",
+			],
+		"customGridColumns":
+			[
+				"AI_REF_NO|cap=Ref.No.;center;wd=80",
+				"AI_TITLE|cap=Title;mnw=200",
+			],
+		"defaultValues":{AI_PRIORITY:20111,AI_STAT:8900}
+			
+	},
+	"ref_field_def":{},
+	"rev_field":"",
+    "captions":{},
+    "tableCode":"ai",
+    "description":"Anomalies Action Item Table"
+}

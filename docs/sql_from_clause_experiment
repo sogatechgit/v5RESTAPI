@@ -1,0 +1,99 @@
+api params
+api/{controller}/{table}/{key}/{keyField}/{includedFields}/{filterExpression}/{sortFields}/{pageNumber}/{pageSize}/{requestConfig}
+
+SELECT desdat.DD_ID, desdat.DD_ASSET, desdat.DD_PARAM, desdat.DD_PARAM_VALUE, desdat.DD_PARAM_UNIT, desdat.DD_PARAM_NOTES, desdat.DD_PARAM_REF
+
+FROM 
+	(
+		(
+			(
+				(tbl_DesignData AS desdat LEFT JOIN tbl_DesignDataParams AS desprm ON desdat.DD_PARAM = desprm.DD_PARAM) 
+					LEFT JOIN sys_Lookups AS lkp_DD_PARAM_UNIT ON desdat.DD_PARAM_UNIT = lkp_DD_PARAM_UNIT.LKP_ID
+			) 
+			LEFT JOIN sys_Lookups AS lkp_DD_PARAM_TYPE ON desprm.DD_PARAM_TYPE = lkp_DD_PARAM_TYPE.LKP_ID
+		) 
+		LEFT JOIN sys_NodesAttrib AS node ON desdat.DD_ASSET = node.REC_TAG
+	) INNER JOIN sys_TreeStruc AS tre ON desdat.DD_ASSET = tre.TRE_DAT_TAG
+
+WHERE (((tre.TRE_NOD_LOC) ALike "$$%"))
+
+ORDER BY lkp_DD_PARAM_TYPE.LKP_DESC_B, lkp_DD_PARAM_UNIT.LKP_DESC_A;
+
+
+desdat|-tre,DD_ASSET,DD_TRE_DAT_TAG;>lkp,DD_PARAM_UNIT;>node,DD_ASSET;>desprm,DD_PARAM>lkp@type,DD_PARAM_TYPE
+
+desdat|
+-tre,DD_ASSET,TRE_DAT_TAG;
+`lkp,DD_PARAM_UNIT;
+`node,DD_ASSET;
+`desprm,DD_PARAM`lkp@type,DD_PARAM_TYPE;
+
+# Select params sample (design data - desdat)
+desdat|-tre,DD_ASSET,TRE_DAT_TAG;`lkp,DD_PARAM_UNIT;`node,DD_ASSET;`desprm,DD_PARAM`lkp@type,DD_PARAM_TYPE;
+	
+
+((((( tbl_DesignData as desdat INNER JOIN sys_TreeStruc as tre ON desdat.DD_ASSET = tre.TRE_DAT_TAG ) 
+	LEFT JOIN sys_Lookups as lkp ON desdat.DD_PARAM_UNIT = lkp.LKP_ID ) 
+		LEFT JOIN sys_NodesAttrib as node ON desdat.DD_ASSET = node.REC_TAG ) 
+			LEFT JOIN tbl_DesignDataParams as desprm ON desdat.DD_PARAM = desprm.DD_PARAM ) 
+				LEFT JOIN sys_Lookups as type ON desprm.DD_PARAM_TYPE = type.LKP_ID )	
+	
+
+FROM 
+(
+	(((tbl_DesignData as desdat INNER JOIN sys_TreeStruc as tre ON desdat.DD_ASSET = tre.TRE_DAT_TAG)
+		LEFT JOIN sys_NodesAttrib AS node ON desdat.DD_ASSET = node.REC_TAG
+	)
+		LEFT JOIN sys_Lookups as unit ON desdat.DD_PARAM_UNIT = unit.LKP_ID
+	)
+	
+		LEFT JOIN tbl_DesignDataParams AS desprm ON desdat.DD_PARAM = desprm.DD_PARAM
+	
+	) LEFT JOIN sys_Lookups as  type ON desprm.DD_PARAM_TYPE = type.LKP_ID
+	
+	
+SELECT desdat.DD_ID, desdat.DD_ASSET, desdat.DD_PARAM, desdat.DD_PARAM_VALUE, desdat.DD_PARAM_UNIT, desdat.DD_PARAM_NOTES, desdat.DD_PARAM_REF
+
+FROM 
+(
+	(((tbl_DesignData as desdat INNER JOIN sys_TreeStruc as tre ON desdat.DD_ASSET = tre.TRE_DAT_TAG)
+		LEFT JOIN sys_NodesAttrib AS node ON desdat.DD_ASSET = node.REC_TAG
+	)
+		LEFT JOIN sys_Lookups as unit ON desdat.DD_PARAM_UNIT = unit.LKP_ID
+	)
+	
+		LEFT JOIN tbl_DesignDataParams AS desprm ON desdat.DD_PARAM = desprm.DD_PARAM
+	
+	) LEFT JOIN sys_Lookups as  type ON desprm.DD_PARAM_TYPE = type.LKP_ID
+WHERE (((tre.TRE_NOD_LOC) ALike "$$%"))
+
+
+
+// initial asset fromClause code
+node|-tre,REC_TAG,TRE_DAT_TAG;`an,REC_TAG,AN_ASSET
+
+// initial design data SQL Parameters
+http://soga-alv/ngarbi/api/app/desdat|-tre,DD_ASSET,TRE_DAT_TAG;`lkp,DD_PARAM_UNIT;`node,DD_ASSET;`desprm,DD_PARAM`lkp@type,DD_PARAM_TYPE/1/DD_ID/count(DD_ID)@anom_count`DD_ASSET`DD_PARAM`DD_PARAM_VALUE`DD_PARAM_UNIT`DD_PARAM_NOTES`DD_PARAM_REF
+|
+
+
+http://soga-alv/ngarbi/api/app/desdat/1/DD_ID/count(DD_ID)@anom_count`DD_ASSET`DD_PARAM`DD_PARAM_VALUE`DD_PARAM_UNIT`DD_PARAM_NOTES`DD_PARAM_REF/
+
+# SQL Parameters with WHERE params
+api/{controller}/{table}/{key}/{keyField}/{includedFields}/{filterExpression}/{sortFields}/{pageNumber}/{pageSize}/{requestConfig}
+http://soga-alv/ngarbi/api/app/
+desdat|
+-tre,DD_ASSET,TRE_DAT_TAG;
+`lkp,DD_PARAM_UNIT;
+`node,DD_ASSET;
+`desprm,DD_PARAM
+	`lkp@type,DD_PARAM_TYPE;/
+1<key>/
+-<keyField>/
+-<Include Fields>/
+({TRE_NOD_LOC|"$$","$$__"}|{1,2,3,5})^{DD_ASSET|1,2,3,4,5,6}?runMode=debug
+
+
+#SQL Parameter Formats
+FROM:<parent table code>|[join params]
+[join params]:[join type],<link table code>[@ table alias],<local field>,[foreign field][<left join>,<sub table code>[@<sub sable alias>],<FIELD>,

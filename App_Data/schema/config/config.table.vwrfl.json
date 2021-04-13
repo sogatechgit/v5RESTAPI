@@ -1,0 +1,27 @@
+{
+    "tableName" : "IMSA_QRY_REFERENCE_LINKS",
+    "tableFieldPrefix":"RFL_",
+    "tableClassFilename":"",
+    "tableClass":"QryRefLinks",
+    "links":[],
+    "tableRowClass":"QryRefLinksRow",
+    "columns": [
+        {"name":"RFL_ID","keyPosition":0},
+        {"name":"RFL_SOURCE","roles":""},
+        {"name":"RFL_DESC","roles":""},
+    ],
+	"clientConfig":{
+		"roles":"links",
+		"keyField":"RFL_ID",
+		
+		"dataGroup":"RFL_GROUP",	
+		
+		"gridColumns":
+			[
+				"RFL_SOURCE|cap=Link Type;center;wd=100",
+				"RFL_DESC|cap=Details;mnw=150",
+			],			
+	},
+    "tableCode":"vwrfl",
+    "description":"Reference file links view"
+}

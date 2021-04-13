@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_PWA",
+  "tableFieldPrefix": "CHD_PWA_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBpwa",
+  "links": [],
+  "tableRowClass": "TblChemDBpwaRow",
+  "columns": [
+    {"name": "CHD_PWA_ID","keyPosition": 0},
+    {"name":"CHD_PWA_UPDATE_DATE","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_PWA_ID"
+  },
+  "captions": {
+    "CHD_PWA_ID": "ID"
+  },
+  "tableCode": "chmpwa",
+  "description": "Chemical Database PWA Collection"
+}

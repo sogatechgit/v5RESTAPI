@@ -1,0 +1,58 @@
+<app-app-form-a [readOnly]="AccessMode=='view'" #detailForm [labelWidth]="80">
+
+  <app-data-tabs  *ngIf="AccessMode=='view'" #t [height]="tabHeight" activeBackground="white" [fluidIds]="[4,5,6,7]"
+    [tabLabels]="'General Information,Links'">
+    <app-panel-a *ngIf="t.a(0)">
+      <ng-container *ngIf="false;else genInfo">
+        <p>no details</p>
+      </ng-container>
+    </app-panel-a>
+    <app-panel-a *ngIf="t.a(1)">
+      <app-data-grid-b #lnkGrid [parentTableCode]="TableCode" [dataSet]="DataSet" tableCode="vwrfl"
+        noExtras="false" noFooter="true" [autoGrid]='true' noMaskOnInit="true" [title]="'Links'"
+        [parentGrid]="moduleExchangeInfo.gridObject" [parentKeyValue]="moduleExchangeInfo.state.dataKeyValue"
+        [gridManagementData]="null" [noInitFocus]="true" [rights]="false"></app-data-grid-b>
+
+
+    </app-panel-a>
+  </app-data-tabs>
+  <app-panel-a *ngIf="AccessMode!='view'" [P]="8" style="font-size:.85em;">
+    <ng-container   *ngIf="false;else genInfo"></ng-container>
+  </app-panel-a>
+
+  <ng-template #genInfo>
+
+    <app-panel-a [horizontal]="true">
+      <app-panel-a [PR]="2">
+
+        <app-app-input-a [fieldName]="'RF_TYPE'" [label]="'Type'"></app-app-input-a>
+
+        <app-app-input-a [fieldName]="'RF_DESC'" [label]="'Description'" [rows]="3"></app-app-input-a>
+
+        <app-app-input-a [fieldName]="'RF_PATH'" [label]="'Path'"></app-app-input-a>
+        <app-app-input-a [fieldName]="'RF_FILENAME'" [label]="'Filename'"></app-app-input-a>
+        <app-app-input-a [fieldName]="'RF_UPDDATE'" [label]="'Upload date'"></app-app-input-a>
+        <app-app-input-a [fieldName]="'RF_NOTES'" [label]="'Notes'" [rows]="2"></app-app-input-a>
+
+
+      </app-panel-a>
+
+      <app-panel-a [PL]="2" [width]="350" [labelWidth]="80">
+        <app-app-input-a [fieldName]="'RF_ASSET'" [label]="'Asset'"></app-app-input-a>
+
+        <app-app-input-a [fieldName]="'RF_LLID'" [label]="'Document Id'"></app-app-input-a>
+        <app-app-input-a [fieldName]="'RF_REVNO'" [label]="'Revision No.'"></app-app-input-a>
+        <app-app-input-a [fieldName]="'RF_REVDATE'" [label]="'Revision Date'"></app-app-input-a>
+
+
+        <app-app-input-a [fieldName]="'RF_CLASS'" [label]="'Classification'"></app-app-input-a>
+
+        <app-app-input-a [fieldName]="'RF_UPDBY'" [label]="'Updated By'"></app-app-input-a>
+        <app-app-input-a [fieldName]="'RF_CONTRACTOR'" [label]="'Contractor'"></app-app-input-a>
+        <app-app-input-a [fieldName]="'RF_REFNOX'" [label]="'Contractor Ref'"></app-app-input-a>
+        <app-app-input-a [fieldName]="'RF_REF_NO'" [label]="'Reference no.'"></app-app-input-a>
+      </app-panel-a>
+
+    </app-panel-a>
+  </ng-template>
+</app-app-form-a>

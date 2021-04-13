@@ -1,0 +1,15 @@
+{
+    "tableName" : "SYS_MATRIX",
+    "tableFieldPrefix":"MTX_",
+    "tableClassFilename":"",
+    "tableClass":"TblMatrix",
+    "links":[],
+    "tableRowClass":"TblMatrixRow",
+    "columns": [
+        {"name":"MTX_ID","type":"Int64","keyPosition":0},
+    ],
+    "captions":{
+    },
+    "tableCode":"mtx",
+    "description":"Matrix Table"
+}

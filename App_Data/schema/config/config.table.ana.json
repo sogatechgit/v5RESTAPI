@@ -1,0 +1,12 @@
+{
+    "tableName" : "IMSA_TBL_ARC_ANOM_MAIN",
+    "tableFieldPrefix":"ANA_",
+    "tableClassFilename":"",
+    "tableClass":"TblAnomaliesArchive",
+    "tableRowClass":"TblAnomaliesArchiveRow",
+    "columns": [
+        {"name":"ANA_ID","type":"Int64","keyPosition":0},
+    ],
+    "tableCode":"ana",
+    "description":"Anomalies Archive Table"
+}

@@ -1,0 +1,25 @@
+{
+    "tableName" : "IMSA_SYS_NODES_ATTRIB",
+    "tableFieldPrefix":"NODE_",
+    "tableClassFilename":"",
+    "tableClass":"TblNodesAttrib",
+    "links":[],
+	"tableDisplayA":"NODE_ID",
+	"tableDisplayB":"NODE_DESC",
+    "tableRowClass":"TblNodesAttribRow",
+    "columns": [
+        {"name":"REC_TAG","type":"Int64","keyPosition":0},
+    ],
+	"relations":[
+		{"foreign_code":"an", "type":"1tom","local_field":"REC_TAG","foreign_field":"AN_ASSET_ID","parent_detail":true},
+	],
+    "clientConfig":{
+		"roles":"nodes,lookup",
+		"lookupCode":"NODE_ID",
+		"lookupText":"NODE_DESC",
+    },
+    "captions":{
+    },
+    "tableCode":"node",
+    "description":"Node/Asset Attribute Table"
+}

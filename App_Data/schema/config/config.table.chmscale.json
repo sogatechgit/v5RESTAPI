@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_COUP_SCALE",
+  "tableFieldPrefix": "CHD_COUP_SC",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBscale",
+  "links": [],
+  "tableRowClass": "TblChemDBscaleRow",
+  "columns": [
+    {"name": "CHD_COUP_SC_ID","keyPosition": 0},
+    {"name":"CHD_COUP_SC_UPDATE_DATE","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_COUP_SC_ID"
+  },
+  "captions": {
+    "CHD_COUP_SC_ID": "ID"
+  },
+  "tableCode": "chmscale",
+  "description": "Chemical Database Scale Collection"
+}

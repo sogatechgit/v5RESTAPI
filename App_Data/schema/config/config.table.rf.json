@@ -1,0 +1,89 @@
+{
+    "tableName" : "IMSA_TBL_REFERENCE_FILES",
+    "tableFieldPrefix":"RF_",
+    "tableClassFilename":"",
+    "tableClass":"TblRefFiles",
+    "tableRowClass":"TblRefFilesRow",
+    "columns": [
+        {"name":"RF_ID","keyPosition":0},
+        {"name":"RF_ASSET","roles":""},
+        {"name":"RF_PATH","roles":"@lookupgroup=142"},
+        {"name":"RF_CLASS","roles":"@lookupgroup=140"},
+        {"name":"RF_TYPE","roles":"@lookupgroup=139"},
+		
+    ],
+	"clientConfig":{
+		"roles":"attachment",
+		"keyField":"RF_ID",
+
+		"assetField":"RF_ASSET",
+		
+		"recordTypeField-x":"RF_TYPE",
+		
+		"deletedFlagField":"RF_DELETED",
+		"deletedDateStamp":"RF_DELETED_DATE",
+		"deletedByStamp":"RF_DELETED_BY",
+		"updatedDateStamp":"RF_UPDDATE",
+		"updatedByStamp":"RF_UPDBY", 
+		
+		"extra":{
+			"gridColumnsInAttachments":{
+				"joins":"",
+				"fields-x":"TBL_RF_PATH.LKP_MEMO_1@RF_PATH_LOC"
+			}
+		},
+		
+		
+		"gridColumns":
+			[
+				"RF_FILENAME|cap=Ref. File Name;center;mnw=100",
+				"RF_DESC|cap=Title;mnw=250",
+				"RF_NOTES|cap=Notes;mnw=150;center",
+				"RF_ASSET|cap=Asset;mnw=150",
+				"RF_TYPE|cap=Type;wd=100",
+				"RF_PATH|cap=Path;wd=100",
+				"RF_REVNO|cap=Rev. No.;wd=100",
+				"RF_REVDATE|cap=Rev. Date;wd=100",
+				"RF_LLID|cap=Document Id;wd=100",
+				"RF_CLASS|cap=Classification;wd=100",
+				"RF_UPDBY|cap=Updated By;wd=100",
+				"RF_CONTRACTOR|cap=Contractor;wd=100",
+				"RF_REF_NO|cap=Reference no.;wd=100",
+				
+			],
+			
+		"gridColumnsAttachment-X":
+			[
+				"RF_DESC|cap=Title@;mnw=250",
+				"RF_TYPE|cap=Type;wd=160",
+				"RF_CLASS|cap=Classification;wd=160",
+				"RF_REVDATE|cap=Rev.Date;wd=120;center",
+				"RF_PATH|cap=Path;wd=100",
+				
+			],		
+			
+		"gridColumnsInAnomalies":
+			[
+				"RF_DESC|cap=Title;mnw=250",
+				"RF_TYPE|cap=Type;wd=150",
+				"RF_CLASS|cap=Classification;wd=150",
+				"RF_REVDATE|cap=Rev.Date;wd=80;center",
+			],
+			
+		"gridColumnsInAttachments":
+			[
+				"RF_DESC|cap=Title;mnw=250",
+				"RF_TYPE|cap=Type;wd=150",
+				"RF_CLASS|cap=Classification;wd=150",
+				"RF_REVDATE|cap=Rev.Date;wd=80;center",
+				"RF_PATH|cap=Path;wd=100",
+				"RF_FILENAME|cap=File;wd=100",
+				"TBL_RF_PATH.LKP_MEMO_1@RF_PATH_LOC|cap=Path;mnw=250",
+			],
+			
+	},
+	"rev_field":"",
+    "captions":{},
+    "tableCode":"rf",
+    "description":"Reference Table"
+}

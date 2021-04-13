@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_WQA",
+  "tableFieldPrefix": "CHD_WQA_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBwqa",
+  "links": [],
+  "tableRowClass": "TblChemDBwqaRow",
+  "columns": [
+    {"name": "CHD_WQA_ID","type": "Int64","keyPosition": 0},
+    {"name":"CHD_WQA_UPDATE_DATE","type":"DateTime","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_WQA_ID"
+  },
+  "captions": {
+    "CHD_WQA_ID": "ID"
+  },
+  "tableCode": "chmwqa",
+  "description": "Chemical Database WQA Collection"
+}

@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_WHRU_WHRU",
+  "tableFieldPrefix": "CHD_WHRU_WHRU_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBwhru",
+  "links": [],
+  "tableRowClass": "TblChemDBwhruRow",
+  "columns": [
+    {"name": "CHD_WHRU_WHRU_ID","type": "Int64","keyPosition": 0},
+    {"name":"CHD_WHRU_WHRU_UPDATE_DATE","type":"DateTime","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_WHRU_WHRU_ID"
+  },
+  "captions": {
+    "CHD_WHRU_WHRU_ID": "ID"
+  },
+  "tableCode": "chmwhru",
+  "description": "Chemical Database WHRU Collection"
+}

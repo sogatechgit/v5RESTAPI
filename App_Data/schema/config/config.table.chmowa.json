@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_OWA",
+  "tableFieldPrefix": "CHD_OWA_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBowa",
+  "links": [],
+  "tableRowClass": "TblChemDBowaRow",
+  "columns": [
+    {"name": "CHD_OWA_ID","type": "Int64","keyPosition": 0},
+    {"name":"CHD_OWA_UPDATE_DATE","type":"DateTime","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_OWA_ID"
+  },
+  "captions": {
+    "CHD_OWA_ID": "ID"
+  },
+  "tableCode": "chmowa",
+  "description": "Chemical Database OWA Collection"
+}

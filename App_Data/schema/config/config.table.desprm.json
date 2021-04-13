@@ -1,0 +1,18 @@
+{
+    "tableName" : "IMSA_TBL_DESIGN_DATA_PARAMS",
+    "tableFieldPrefix":"DD_PARAM_",
+    "tableClassFilename":"",
+    "tableClass":"TblDesignDataParams",
+    "links":[],
+    "tableRowClass":"TblDesignDataParamsRow",
+    "columns": [
+        {"name":"DD_PARAM","keyPosition":0},
+		{"name":"DD_PARAM_TYPE","roles":"@lookupgroup=109"},
+    ],
+	"clientConfig":{
+		"keyField":"DD_PARAM"
+  },
+    "captions":{},
+    "tableCode":"desprm",
+    "description":"Design Parameter Collection"
+}

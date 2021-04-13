@@ -1,0 +1,18 @@
+{
+    "tableName" : "IMSA_TBL_SVY_POSITION",
+    "tableFieldPrefix":"SVY_POS_",
+    "tableClassFilename":"",
+    "tableClass":"TblSurveyPosition",
+    "links":[],
+    "tableRowClass":"TblSurveyPositionRow",
+    "columns": [
+        {"name":"SVY_POS_ID","keyPosition":0},
+		
+    ],
+    "clientConfig":{
+		"keyField":"SVY_POS_ID"},
+		"updatedDateStamp":"SVY_POS_UPDATE_DATE",
+    "captions":{},
+    "tableCode":"svypos",
+    "description":"Survey Positions Collection"
+}

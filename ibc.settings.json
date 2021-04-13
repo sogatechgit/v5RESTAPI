@@ -1,0 +1,20 @@
+{
+    "FMT_TABLE_CONFIG":"config.table.{0}.json",
+    "FMT_VIEW_CONFIG":"config.view.{0}.json",
+    "FMT_PROCEDURE_CONFIG":"config.procedure.{0}.json",
+    "FMT_TABLE_MODEL":"{0}.table.ts",
+    "FMT_VIEW_MODEL":"{0}.view.ts",
+    "FMT_PROCEDURE_MODEL":"{0}.procedure.ts",
+    "PATH_SCHEMA":"schema",
+    "PATH_SCHEMA_CONFIG":"ibc",
+    "PATH_SCHEMA_CLIENT":"client",
+    "TPL_TARGET_TYPESCRIPT_IMPORT":"import { <TABLE>, <TABLEROW> } from './app.tables';",
+    "TPL_TARGET_TYPESCRIPT_INSTANCE":"public <TABLEVAR>:<TABLE> = this.AddTable(new <TABLE>(this.http, this.apiUrl, this.tables, this.apiCommon));",
+    "PATH_SCHEMA_TEMPLATES":"templates",
+    "PATH_SETTINGS": "App_Data",
+    "PATH_TARGET_TYPESCRIPT_FOLDER":"d:\\Users\\alv\\Documents\\Data\\ngp\\TestAPI\\src\\app\\services",
+    "PATH_TARGET_TYPESCRIPT_PATH":"D:\\Users\\alv\\Documents\\Data\\ngp\\ng10\\src\\app\\svc\\app.tables.ts",
+    "PATH_TARGET_TYPESCRIPT_DATASET":"D:\\Users\\alv\\Documents\\Data\\ngp\\ng10\\src\\app\\svc\\app-dataset.service.ts",
+    "CONNECTION_NAME": "cnsIBCAPI",
+    "DATA_API": "http://localhost:16598/api/app"
+}

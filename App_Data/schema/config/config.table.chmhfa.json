@@ -1,0 +1,21 @@
+{
+  "tableName": "IMSA_TBL_CHD_HFA",
+  "tableFieldPrefix": "CHD_HFA_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBHFA",
+  "links": [],
+  "tableRowClass": "TblChemDBHFARow",
+  "columns": [
+    {"name": "CHD_HFA_ID","type": "Int64","keyPosition": 0},
+    {"name":"CHD_HFA_UPDATE_DATE","type":"DateTime","roles":"updated"},
+    {"name":"CHD_HFA_UPDATE_BY","type":"String","roles":"updatedby"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_HFA_ID"
+  },
+  "captions": {
+    "CHD_HFA_ID": "ID"
+  },
+  "tableCode": "chmhfa",
+  "description": "Chemical Database HFA Collection"
+}

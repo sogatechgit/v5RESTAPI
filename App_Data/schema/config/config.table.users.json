@@ -1,0 +1,21 @@
+{
+    "tableName" : "IMSA_TBL_USERS",
+    "tableFieldPrefix":"USER_",
+    "tableClassFilename":"",
+    "tableClass":"TblUsers",
+    "links":[],
+    "tableRowClass":"TblUsersRow",
+    "columns": [
+        {"name":"USER_ID","keyPosition":0},
+		
+    ],
+    "clientConfig":{
+		"roles":"users",
+		"lookupText":"USER_NAME",
+		"lookupTextAsValue":true,
+	},
+    "captions":{
+    },
+    "tableCode":"users",
+    "description":"Users Collection Table"
+}

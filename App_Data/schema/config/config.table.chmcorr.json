@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_COUP_CORR",
+  "tableFieldPrefix": "CHD_COUP_CORR_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBcorr",
+  "links": [],
+  "tableRowClass": "TblChemDBcorrRow",
+  "columns": [
+    {"name": "CHD_COUP_CORR_ID","keyPosition": 0},
+    {"name":"CHD_COUP_CORR_UPDATE_DATE","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_COUP_CORR_ID"
+  },
+  "captions": {
+    "CHD_COUP_CORR_ID": "ID"
+  },
+  "tableCode": "chmcorr",
+  "description": "Chemical Database Corr-Related Collection"
+}

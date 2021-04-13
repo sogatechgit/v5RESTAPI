@@ -1,0 +1,26 @@
+{
+    "tableName" : "IMSA_SYS_LOOKUPS",
+    "tableFieldPrefix":"LKP_",
+    "tableClassFilename":"",
+    "tableClass":"TblLookups",
+    "links":[],
+	"tableDisplayA":"LKP_DESC_A",
+	"tableDisplayB":"LKP_DESC_B",
+    "tableRowClass":"TblLookupsRow",
+    "columns": [
+        {"name":"LKP_ID","type":"Int64","keyPosition":0},
+        {"name":"LKP_GRP_ID","type":"Int64","groupPosition":0},
+    ],
+    "captions":{
+    },
+	"clientConfig":{
+		"roles":"commonlookup",
+		"lookupCode":"LKP_DESC_A",
+		"lookupText":"LKP_DESC_B",
+		"lookupGroup":"LKP_GRP_ID",
+		"lookupBack":"LKP_TEXT_50_1",
+		"lookupFore":"LKP_TEXT_50_2",
+	},
+    "tableCode":"lkp",
+    "description":"Composite Lookups Table"
+}

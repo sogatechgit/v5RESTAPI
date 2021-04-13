@@ -1,0 +1,24 @@
+{
+    "tableName" : "IMSA_TBL_ANOM_TYPES",
+    "tableFieldPrefix":"ANTYPE_",
+    "tableClassFilename":"",
+    "tableClass":"TblAnomalyTypes",
+    "tableRowClass":"TblAnomalyTypesRow",
+    "links":[],
+    "columns": [
+        {"name":"ANTYPE_ID","type":"Int64","keyPosition":0},
+        {"name":"ANTYPE_CODE","type":"String","roles":"lkpcode"},
+        {"name":"ANTYPE_NAME","type":"String","roles":"lkptext"},
+        {"name":"ANTYPE_GROUP","type":"Int64","roles":"lkpgroup"},
+		
+    ],
+	"clientConfig":{
+		"roles":"lookup",
+		"lookupCode":"ANTYPE_CODE",
+		"lookupText":"ANTYPE_NAME",
+		"lookupGroup":"ANTYPE_GROUP",
+		"gridColumns":""
+	},	
+    "tableCode":"antype",
+    "description":"Anomalies Table"
+}

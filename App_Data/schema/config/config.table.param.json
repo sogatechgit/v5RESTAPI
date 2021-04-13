@@ -1,0 +1,17 @@
+{
+    "tableName" : "IMSA_TBL_USER_PARAMS",
+    "tableFieldPrefix":"USER_PARAM_",
+    "tableClassFilename":"",
+    "tableClass":"TblUserParam",
+    "links":[],
+    "tableRowClass":"TblUserParamRow",
+    "columns": [
+        {"name":"USER_PARAM_ID","type":"Int64","keyPosition":0},
+        {"name":"USER_PARAM_USER_ID","type":"Int64","groupPosition":0},
+		
+    ],
+    "captions":{
+    },
+    "tableCode":"param",
+    "description":"User Parameters Table"
+}

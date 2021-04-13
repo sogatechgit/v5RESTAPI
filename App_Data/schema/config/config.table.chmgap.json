@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_GAP",
+  "tableFieldPrefix": "CHD_GAP_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBGAP",
+  "links": [],
+  "tableRowClass": "TblChemDBGAPRow",
+  "columns": [
+    {"name": "CHD_GAP_ID","type": "Int64","keyPosition": 0},
+    {"name":"CHD_GAP_UPDATE_DATE","type":"DateTime","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_GAP_ID"
+  },
+  "captions": {
+    "CHD_GAP_ID": "ID"
+  },
+  "tableCode": "chmgap",
+  "description": "Chemical Database QUAL Collection"
+}

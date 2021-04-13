@@ -1,0 +1,20 @@
+{
+  "tableName": "IMSA_TBL_CHD_GLY",
+  "tableFieldPrefix": "CHD_GLY_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBglycol",
+  "links": [],
+  "tableRowClass": "TblChemDBglycolRow",
+  "columns": [
+    {"name": "CHD_GLY_ID","type": "Int64","keyPosition": 0},
+    {"name":"CHD_GLY_UPDATE_DATE","type":"DateTime","roles":"updated"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_GLY_ID"
+  },
+  "captions": {
+    "CHD_GLY_ID": "ID"
+  },
+  "tableCode": "chmglycol",
+  "description": "Chemical Database Glycol Analysis Collection"
+}

@@ -1,0 +1,61 @@
+{
+    "tableName" : "IMSA_TBL_DESIGN_DATA_MAIN",
+    "tableFieldPrefix":"DD_",
+    "tableClassFilename":"",
+    "tableClass":"TblDesignData",
+    "tableRowClass":"TblDesignDataRow",
+    "links":[],
+    "tableDisplayA":"",
+    "tableDisplayB":"",
+    "relations":[
+		{"local_field":"DD_ASSET", "foreign_code":"node","foreign_field":"REC_TAG", "type":"lkp"}
+    ],
+    "columns": [
+        {"name":"DD_ID","keyPosition":0},
+        {"name":"DD_ASSET","roles":""},    
+		{"name":"DD_PARAM","roles":"@lookuptable=desprm"},
+        {"name":"DD_PARAM_UNIT","roles":"@lookupgroup=110"},
+        {"name":"DD_UPDATE_DATE","roles":"datestamp"},
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"DD_ID",
+		"subTable-y":"desprm",
+		"subTable":{
+			"137" : {"tableCode":"desprm","code":"","name":"Operating Event","group":109,"icon":"","extraJoins":"","extraFields":"","fieldMapping":{}},
+		},
+		"assetField":"DD_ASSET",
+
+		"recordTypeField-x":"DD_PARAM",
+		"dataGroup":"DD_PARAM",
+		
+		"deletedFlagField":"DD_DELETED",
+		"deletedDateStamp":"DD_DELTED_DATE",
+		"deletedByStamp":"DD_DELETED_BY",
+		"updatedDateStamp":"DD_UPDATE_DATE",
+		"extraJoins":"`desprm@desprmG,DD_PARAM`lkp@ddtype,DD_PARAM_TYPE;",
+		"extraFields":"desprmG.DD_PARAM_TYPE@^DDPAR_TYP`ddtype.LKP_DESC_B@DDPAR_TYP`desprmG.DD_PARAM_NAME",
+		"gridColumns":
+			[
+				"DD_ASSET|cap=Asset;mnw=150",
+				"DD_PARAM_TYPE|cap=Param Type;wd=100;disp=DDPAR_TYP;nofilt",
+				"DD_PARAM_VALUE|cap=Value;wd=100",
+				"DD_PARAM_UNIT|cap=Unit;wd=100",
+				"DD_PARAM_NOTES|cap=Notes;wd=150",
+				"DD_PARAM_REF|cap=Reference;wd=150",
+			],
+		"defaultValues": {"DD_PARAM_UNIT": 1500}
+			
+	},
+    "captions":{
+		"DD_ID":"ID",
+		"DD_ASSET":"Asset",
+		"DD_PARAM":"Name",
+		"DD_PARAM_VALUE":"Value",
+		"DD_PARAM_UNIT":"Unit",
+		"DD_PARAM_NOTES":"Notes",
+		"DD_PARAM_REF":"References"
+    },
+    "tableCode":"desdat",
+    "description":"Design Data Collection"
+}

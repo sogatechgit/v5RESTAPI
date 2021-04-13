@@ -1,0 +1,64 @@
+{
+    "tableName" : "IMSA_TBL_SVY_HEADER",
+    "tableFieldPrefix":"SVY_",
+    "tableClassFilename":"",
+    "tableClass":"TblSurveyHeader",
+    "tableRowClass":"TblSurveyHeaderRow",
+	"links":[],
+    "tableDisplayA":"",
+    "tableDisplayB":"",
+    "relations":[
+		{"local_field":"SVY_HDR_NOD_ID", "foreign_code":"node","foreign_field":"REC_TAG", "type":"lkp"}
+    ],
+    "columns": [
+        {"name":"SVY_HDR_ID","keyPosition":0},
+        {"name":"SVY_HDR_NOD_ID","roles":""},
+		{"name":"SVY_HDR_COLOUR","roles":"@lookupgroup=156"},
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"SVY_HDR_ID",
+		"subTable-y":"",
+		"subTable":{
+				"" : {"tableCode":"svyevt","code":"","name":"Survey Event","extraJoins":"","extraFields":"","fieldMapping":{}},
+				"" : {"tableCode":"svy","code":"","name":"Survey Event","extraJoins":"","extraFields":"","fieldMapping":{}},
+		},
+		"assetField":"SVY_HDR_NOD_ID",
+		"recordTypeField-x":"",
+		"dataGroup":"",
+		"deletedFlagField":"SVY_HDR_DELETED",
+		"deletedDateStamp":"",
+		"deletedByStamp":"",
+		"updatedDateStamp":"SVY_HDR_UPDATE_DATE",
+		"updatedByStamp":"SVY_HDR_UPDATE_BY",
+		"extraJoins":"`svyevt,SVY_HDR_EVT_ID;`svy,SVY_HDR_MAIN_ID;`svypos,SVY_HDR_START_POS_ID;",
+		"extraFields":"SVY_EVT_DESC`SVY_MAIN_DATE_START`SVY_MAIN_DATE_END`SVY_MAIN_TITLE`SVY_POS_KP`SVY_POS_KP@KP_END",
+		"gridColumns":
+			[
+				"SVY_HDR_NOD_ID|cap=Asset;mnw=150",
+				"SVY_EVT_DESC|cap=Event;wd=200",
+				"SVY_HDR_EVT_NUM|cap=Event #;wd=80;center",
+				"SVY_MAIN_DATE_START|cap=Start Datetime;wd=100",
+				"SVY_MAIN_DATE_END|cap=End Datetime;wd=100",
+				"SVY_POS_KP|cap=Start KP;wd=60;center;",
+				"SVY_POS_KP|cap=End KP;wd=60;center;disp=KP_END;nofilt",
+				"SVY_HDR_ASS_DATE|cap=Assess Date;wd=100",
+				"SVY_HDR_ASS_BY|cap=Assess By;wd=100",
+				"SVY_HDR_COLOUR|cap=Color;wd=60;center;color",
+				"SVY_HDR_UPDATE_DATE|cap=Updated Date;wd=100",
+				"SVY_HDR_UPDATE_BY|cap=Updated By;wd=100",
+			],
+		"gridRelatedEvents":
+			[
+				"SVY_HDR_NOD_ID|cap=Asset Location;mnw=150",
+				"SVY_MAIN_TITLE|cap=Survey Campaign;wd=200",
+				"SVY_EVT_DESC|cap=Event;wd=150",
+				"SVY_HDR_EVT_NUM|cap=Event #;wd=80;center",
+			],
+		"defaultValues": {}
+			
+	},
+    "captions":{},
+    "tableCode":"svyhdr",
+    "description":"Survey Header Collection"
+}

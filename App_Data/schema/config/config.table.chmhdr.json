@@ -1,0 +1,85 @@
+{
+    "tableName" : "IMSA_TBL_CHD_HEADER",
+    "tableFieldPrefix":"CHD_HDR_",
+    "tableClassFilename":"",
+    "tableClass":"TblChemDBHeader",
+    "tableRowClass":"TblChemDBHeaderRow",
+    "links":[],
+	"tableDisplayA":"",
+	"tableDisplayB":"",
+	"relations":[
+		{"local_field":"AN_STATUS", "foreign_code":"lkp","foreign_field":"LKP_ID","foreign_group":"143", "type":"lkp"},
+		{"local_field":"AN_ASSET_ID", "foreign_code":"node","foreign_field":"REC_TAG", "type":"lkp"}
+	],
+    "columns": [
+        {"name":"CHD_HDR_ID","keyPosition": 0},
+		{"name":"CHD_HDR_DELETED","roles": "deleted"},
+		{"name":"CHD_HDR_ASSET_ID","roles": "asset,@display|NODE_DESC,@nodeloc|TRE_NOD_LOC"},
+		{"name":"CHD_HDR_STATUS","roles":"@lookupgroup=157"},
+		{"name":"CHD_HDR_ANA_VEND","roles":"@lookupgroup=158"},
+		{"name":"CHD_HDR_INT","roles":"@lookupgroup=133"},
+		
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"CHD_HDR_ID",
+		"subTable":{
+				"1" : {"tableCode":"chmgap","code":"chmgap","name":"Hydrocarbon Composition","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"2" : {"tableCode":"chmowa","code":"chmowa","name":"Organic (Oil & Wax) Analysis","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"3" : {"tableCode":"chmbac","code":"chmbac","name":"Bacteria Analysis (Bacteria)","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"4" : {"tableCode":"chmpwa","code":"chmpwa","name":"Produced Water Analysis","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"5" : {"tableCode":"","code":"","name":"Solid Analysis","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"6" : {"tableCode":"","code":"","name":"Failure Analysis","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"7" : {"tableCode":"","code":"","name":"Bacteria Analysis (Biocide Testing)","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"8" : {"tableCode":"chmcorr","code":"chmcorr","name":"Corrosion Coupon","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"9" : {"tableCode":"chmscale","code":"chmscale","name":"Scale Coupon","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"10" : {"tableCode":"","code":"","name":"BSW Readings","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"11" : {"tableCode":"chmwqa","code":"chmwqa","name":"Water Quality (Oil & Grease) Analysis","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"12" : {"tableCode":"chmglycol","code":"chmglycol","name":"Glycol Analysis","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"13" : {"tableCode":"chmwhru","code":"chmwhru","name":"WHRU and Jacket Water (WHRU)","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"14" : {"tableCode":"chmwhrujack","code":"chmwhrujack","name":"WHRU and Jacket Water (Jacket)","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"15" : {"tableCode":"chmwhruwater","code":"chmwhruwater","name":"WHRU Water Analysis","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"16" : {"tableCode":"chmtreat","code":"chmtreat","name":"Chemical Treatment Rates","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"17" : {"tableCode":"chmqual","code":"","name":"Chemical Documents","icon":"fa fa-folder","extraJoins":"","extraFields":"","fieldMapping":{}},
+				"18" : {"tableCode":"","code":"","name":"Field Service","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"19" : {"tableCode":"chmhfa","code":"chmhfa","name":"Hydraulic Fluid Analysis","icon":"fa fa-folder","extraJoins":"","extraFields":""},
+				"20" : {"tableCode":"chmrsd","code":"chmrsd","name":"Chemical Residuals","icon":"fa fa-folder","extraJoins":"","extraFields":""}	
+			},
+		"assetField":"CHD_HDR_ASSET_ID",
+		"revisionField":"",
+		"referenceField":"",
+		"recordTypeField":"",
+		"deletedFlagField":"CHD_HDR_DELETED",
+		"deletedDateStamp":"",
+		"deletedByStamp":"",
+		"createdDateStamp":"",
+		"createdByStamp":"",
+		"updatedDateStamp":"CHD_HDR_UPDATE_DATE",
+		"updatedByStamp":"",
+		"assessedDateStamp":"",
+		"assessedByStamp":"",
+		"lookupCode":"",
+		"lookupText":"",
+		"dataGroup":"CHD_HDR_TYPE",
+		"extraFields":"",
+		"extraJoins":"",
+		"treeRecolorOnUpdate":"",
+		"gridColumns":
+			[
+				"CHD_HDR_ASSET_ID|cap=Sampling Location;mnw=200",
+				"CHD_HDR_SAMP_DATE|cap=Sampling Date;wd=150",
+				"CHD_HDR_COMMENTS|cap=Comments;mnw=200",
+				"CHD_HDR_STATUS|cap=Status;wd=70;center;color",
+			],
+		"defaultValues":{"CHD_HDR_TYPE":18}
+			
+	},
+	"ref_field_def":{},
+	"rev_field":"",
+    "captions":{
+				"CHD_HDR_ID": "ID",
+				"CHD_HDR_ASSET_ID": "Sampling Location"
+			},
+    "tableCode":"chmhdr",
+    "description":"Chemical Database Header Collections"
+}

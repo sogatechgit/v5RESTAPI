@@ -1,0 +1,37 @@
+{
+    "tableName" : "IMSA_TBL_DESIGN_DATA_KP",
+    "tableFieldPrefix":"DD_KP_",
+    "tableClassFilename":"",
+    "tableClass":"TblDesignDataKP",
+    "links":[],
+    "tableRowClass":"TblDesignDataKPRow",
+	"relations":[],
+    "columns": [
+        {"name":"DD_KP_ID","keyPosition":0},
+		{"name":"DD_KP_UNIT","roles":"@lookupgroup=110"},
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"DD_KP_ID",
+		"assetField":"",
+		"recordTypeField":"",
+		"dataGroup":"DD_KP_DD_ID",
+		"deletedFlagField":"DD_KP_DELETED",
+		"deletedDateStamp":"",
+		"deletedByStamp":"",
+		"updatedDateStamp":"",
+		"extraJoins":"",
+		"extraFields":"",
+		"gridColumns":
+			[
+				"DD_KP_START|cap=KP Start;wd=100",
+				"DD_KP_END|cap=KP End;wd=100",
+				"DD_KP_VALUE|cap=KP Value;wd=100",
+				"DD_KP_UNIT|cap=KP Unit;mnw=200",
+			],
+		"defaultValues": {}
+    },
+    "captions":{},
+    "tableCode":"deskp",
+    "description":"Design Data KP Based Collection"
+}

@@ -1,0 +1,16 @@
+{
+    "tableName" : "IMSA_TBL_ANOM_MAIN_SUB",
+    "tableFieldPrefix":"ANS_",
+    "tableClassFilename":"",
+    "tableClass":"TblAnomaliesSub",
+    "tableRowClass":"TblAnomaliesSubRow",
+    "links":[],
+    "columns": [
+        {"name":"ANS_AN_ID","type":"Int64","keyPosition":0},
+    ],
+	"clientConfig":{
+		"keyField":"ANS_AN_ID",
+	},
+    "tableCode":"ans",
+    "description":"Anomalies Sub Table"
+}

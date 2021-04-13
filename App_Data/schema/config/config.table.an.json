@@ -1,0 +1,180 @@
+{
+    "tableName" : "IMSA_TBL_ANOM_MAIN",
+    "tableFieldPrefix":"AN_",
+    "tableClassFilename":"",
+    "tableClass":"TblAnomalies",
+    "tableRowClass":"TblAnomaliesRow",
+    "links":[],
+	"tableDisplayA":"AN_REF",
+	"tableDisplayB":"AN_TITLE",
+	"relations":[
+		{"local_field":"AN_STATUS", "foreign_code":"lkp","foreign_field":"LKP_ID","foreign_group":"143", "type":"lkp"},
+		{"local_field":"AN_ASSET_ID", "foreign_code":"node","foreign_field":"REC_TAG", "type":"lkp"}
+	],
+	"config_notes":[
+		"column params:",
+		"	code - to use lookup code instead of description",
+		"	nofilt - disables column filtering",
+		"	center, left, right - column data text alignment",
+		"	color - flag to extract color parameters (foreground and background colors) from the general lookup table fields",
+		"	map=<fieldname map> - fieldname suibstitution to reduce number of request characters",
+		"	disp=<display field> - display source fieldname",
+		"	cap=<caption> - column header text",
+		"	wd=<width> - column width which is assigned to column's minimum and maximum width",
+		"	mnw=<minWidth> - column's minimum width for flexing type column",
+		"	mxw=<minWidth> - column's maximum width for flexing type column",
+		
+		"default values (defaultValues) - json object which specifies default values for fields during creation of new records",
+		
+		"field/column properties (semi-colon delimted):",
+		"	@lookupgroup=<group number> - lookup group number of a standard lookup stored in common lookup table",
+		"	@lookuptable=<switch code> - table code of the lookup source table object",
+		"	@lookupswitch=<switch code/values> - toggle type field settings. If YN or YN-, options will be Yes,No[,-] ",
+		"		custom switch: <value1>:<display1>[|<value2>:<display2>]...[|<value#>:<display#>]",
+		"	@map=<fieldname map> - fieldname suibstitution to reduce number of request characters",
+		"	datestamp|<LinkedField1[,LinkedField2]...[,LinkedField#]> - date stamp field to updated when LinkeField(s) is updated.",
+		"	userstamp|<LinkedField1[,LinkedField2]...[,LinkedField#]> - user stamp field to updated when LinkeField(s) is updated.",
+		
+	],
+    "columns": [
+        {"name":"AN_ID","keyPosition":0},
+        {"name":"AN_ASSET_ID","roles":""},
+        {"name":"AN_TITLE","roles":"@maxlen=100;@minlen=5"},
+        {"name":"AN_DATE_IDENT","roles":"required"},
+        {"name":"AN_DESC","roles":"required"},
+        {"name":"AN_ORIG_CLASS","roles":"@lookupgroup=144;@map=OC"},
+        {"name":"AN_CURR_CLASS","roles":"@lookupgroup=144;@map=CC"},
+        {"name":"AN_ORIG_AVAIL_CLASS","roles":"@lookupgroup=144;@map=OAC"},
+        {"name":"AN_CURR_AVAIL_CLASS","roles":"@lookupgroup=144;@map=CAC"},
+        {"name":"AN_STATUS","roles":"@lookupgroup=143"},
+        {"name":"AN_LIFE_TERM","roles":"@lookupgroup=146"},
+		{"name":"AN_WO_STATUS","roles":"@lookupgroup=190"},
+		{"name":"AN_MAINT_REQ","roles":"@lookupgroup=145"},
+        {"name":"AN_ASS_DATE","roles":"datestamp|AN_ASSMNT"},
+		{"name":"AN_ASS_BY","roles":"userstamp|AN_ASSMNT"},
+        {"name":"AN_AVAIL_UPD_DATE","roles":"datestamp|AN_ORIG_AVAIL_CLASS,AN_CURR_AVAIL_CLASS"},
+		{"name":"AN_AVAIL_UPD_BY","roles":"userstamp|AN_ORIG_AVAIL_CLASS,AN_CURR_AVAIL_CLASS"},
+		{"name":"AN_TYPE","type":"String","roles":"@lookuptable=antype"},
+		{"name":"AN_RISK_RANK_SEVERITY","roles":"@lookupgroup=148;@map=S"},
+		{"name":"AN_RISK_RANK_LIKELIHOOD","roles":"@lookupgroup=147;@map=L"},
+		{"name":"AN_ASIS","roles":"@lookupswitch=YN-"},
+		{"name":"AN_TA_APPROVED","roles":"@lookupswitch=YN-"},
+		{"name":"AN_PT_SUPPORT","roles":"@lookupswitch=YN-"},
+		{"name":"AN_PORTFOLIO_APPL","roles":"@lookupswitch=YN-"},
+		{"name":"AN_EQ_FAILURE","roles":"@lookupswitch=YN-"},
+		{"name":"AN_FNCR_REQUIRED","roles":"@lookupswitch=YN-"},
+		
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"AN_ID",
+		"subTable-y":"ans",
+		"subTable":{
+			"58" : {"tableCode":"ans","code":"","name":"Operating Event","group":8570,"icon":"","extraJoins":"","extraFields":"","fieldMapping":{}},
+			"57" : {"tableCode":"ans","code":"","name":"Overdue Corrective Maintenance","group":8569},
+		},
+		
+		"refFilesLinkPathId-x":{"common":16000},
+
+		"assetField":"AN_ASSET_ID",
+		"revisionField":"AN_REVNO",
+		"referenceField":"AN_REF|YY-NNNN",
+		
+		"recordTypeField-x":"AN_TYPE",
+		"dataGroup-x":"AN_TYPE",		
+		
+		"deletedFlagField":"AN_DELETED",
+		"deletedDateStamp":"AN_DELETED_DATE",
+		"deletedByStamp":"AN_DELETED_BY",
+		"createdDateStamp":"AN_RAISED_DATE",
+		"createdByStamp":"AN_RAISED_BY",
+		"updatedDateStamp":"AN_UPD_DATE",
+		"updatedByStamp":"AN_UPD_BY",
+		"assessedDateStamp":"AN_ASS_DATE",
+		"assessedByStamp":"AN_ASS_BY",
+		
+		"lookupCode":"AN_REF",
+		"lookupText":"AN_TITLE",
+		
+		"extraJoins":"`antype@antypeG,AN_TYPE`lkp@antgrp,ANTYPE_GROUP;",
+		"extraFields":"antypeG.ANTYPE_GROUP@^ANT_GRP`antgrp.LKP_DESC_B@ANT_GRP",
+		
+		"extra":{
+			"gridColumns":{
+				"joins":"`antype@antypeG,AN_TYPE`lkp@antgrp,ANTYPE_GROUP;",
+				"fields":"antypeG.ANTYPE_GROUP@^ANT_GRP`antgrp.LKP_DESC_B@ANT_GRP"
+			}
+		},
+		
+		"treeRecolorOnUpdate":"AN_ASSET_ID,AN_CURR_CLASS",
+		"gridColumns-test":
+			[
+				"AN_REF|cap=Ref.No.;center;wd=60",
+				"AN_REVNO|cap=Revision;wd=50;center",
+				"AN_TITLE|cap=Title;mnw=150",
+				"AN_RISK_RANK_SEVERITY|cap=Severity;map=S;wd=40;center;code",
+				"AN_RISK_RANK_LIKELIHOOD|cap=Likelihood;map=L;wd=40;center;code",
+			],
+		"gridColumns":
+			[
+				"AN_REF|cap=Ref.No.;center;wd=60",
+				"AN_REVNO|cap=Revision;wd=50;center",
+				"AN_TITLE|cap=Title;mnw=150",
+				"AN_DESC|cap=Description;mnw=250",
+				"AN_MAINT_REQ|cap=Ma.Req;wd=80",
+				"AN_ACT_PARTY|cap=Action Party;wd=120",
+				"AN_ASSET_ID|cap=Asset;mnw=150",
+				"AN_STATUS|cap=Status;wd=70;center",
+				"AN_WO_REF|cap=SAP#;wd=80",
+				"AN_WO_STATUS|cap=SAP Status;wd=90",
+				"AN_ASIS|cap=OTR;wd=30;center",
+				"AN_ASSMNT|cap=Assessment;mnw=250",
+				"AN_ASS_BY|cap=Assessed By;wd=120",
+				"AN_ASS_DATE|cap=Assessed Date;wd=87",
+				"AN_DATE_IDENT|cap=Date Identified;wd=87",
+				"AN_RAISED_BY|cap=Raised By;wd=120",
+				"AN_RAISED_DATE|cap=Raised;wd=87",
+				
+				"AN_UPD_BY|cap=Raised By;wd=120",
+				"AN_UPD_DATE|cap=Updated Date;wd=87",
+				
+				"AN_RECCMD|cap=Recommendation;mnw=250",
+				"AN_TA_APPROVED|cap=TA Approved;wd=30;center",
+				"AN_TA_NAME|cap=Raised By;wd=120",
+				"AN_TA_APPR_DATE|cap=TA Approve Date;wd=87",
+				
+				"AN_ACT_BY_DATE|cap=Action By Date;wd=87",
+				
+				
+				"AN_ORIG_CLASS|cap=Orig.Class;wd=70;center;color",
+				"AN_CURR_CLASS|cap=Curr.Class;wd=70;center;color",
+				"AN_ORIG_AVAIL_CLASS|cap=Orig.Avail.Class;wd=70;center;color",
+				"AN_CURR_AVAIL_CLASS|cap=Curr.Avail.Class;wd=70;center;color",
+				"AN_TYPE|cap=Type;wd=100",
+				"ANTYPE_GROUP|cap=Type Group;wd=100;disp=ANT_GRP;nofilt",
+				"AN_RISK_RANK_SEVERITY|cap=Severity;map=S;wd=40;center;code",
+				"AN_RISK_RANK_LIKELIHOOD|cap=Likelihood;map=L;wd=40;center;code",
+			],
+		"gridRelatedAnomalies":
+			[
+				"AN_REF|cap=Ref.No.;center;wd=60",
+				"AN_TITLE|cap=Title;mnw=150;mxw=250",
+				"AN_ASSET_ID|cap=Asset;mnw=250",
+				"AN_RAISED_DATE|cap=Raised;wd=87",
+				"AN_STATUS|cap=Status;wd=70;center",
+				"AN_CURR_CLASS|cap=Class;wd=70;center;color",
+			],			
+		"defaultValues":{AN_TYPE:58,ANTYPE_GROUP:8570,
+			AN_ORIG_CLASS:8471,AN_CURR_CLASS:8471,
+			AN_ORIG_AVAIL_CLASS:8471,AN_CURR_AVAIL_CLASS:8471,
+			AN_LIFE_TERM:8500,AN_MAINT_REQ:8491,AN_STATUS:8450,
+			AN_PT_SUPPORT:0,AN_ASIS:0,AN_ATTACHMENTS:0,
+			AN_PORTFOLIO_APPL:0,AN_FNCR_REQUIRED:0}
+			
+	},
+	"ref_field_def":{"name":"AN_REF","format":"{YY}-{N4}"},
+	"rev_field":"AN_REVNO",
+    "captions":{},
+    "tableCode":"an",
+    "description":"Anomalies Table"
+}

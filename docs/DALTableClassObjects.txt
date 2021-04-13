@@ -1,0 +1,315 @@
+***************************************************************************************************
+Web API
+***************************************************************************************************
+App_Start/WebApiConfig/Register:
+config.Routes.MapHttRoute
+	routeTemplate: api/{controller}/{key}/{keyField}
+
+
+api call:
+	<protocol>://<domain>:[port]/<application>/api/<controller>/<table code>/[key value]/[key field index]
+
+sample api call: 
+	
+	http://soga-alv/NgArbi/api/app/upln/1/2
+	
+	Where:
+		protocol 	: http
+		domain		: soga-alv
+		port		: (not specified)
+		application	: NgArbi
+		controller	: app
+		table code 	: upln
+		key value	: 1	(optional)
+		key field index	: 2	(optional)
+
+	Notes:
+		- If key value and key field is not specified, all records will be returned
+		- If key field index is not specified, key field index used will be the index
+		  of the field defined as keyField in the table configuration file in
+		  <app folder>/App_Data/schema/config/config.table.<table code>.json file.
+		  columns/keyPosition:0
+		
+		  Example:
+
+		     "columns": [
+		        {"name":"upln_id","type":"Int64","keyPosition":0},
+		        {"name":"upln_user_id","type":"Int64","groupPosition":0}
+		    ],
+		    
+		    Where:
+			column "upln_id" is the key field because it has the key-value pair
+			"keyPosition":0
+
+
+get:
+http://soga-alv/NgArbi/api/app/@gents
+   if table code is set to @gents, api is instructed to generate TypeScrip files 
+   which serve as equivalent Table Class library that will be used by the client-side
+   angular application
+
+http://soga-alv/NgArbi/api/app/upln/1/2
+
+http://soga-alv/NgArbi/api/app/plnt/1
+sql (sql)-
+"select T.* from tbl_PlantData as T  where [plnt_id] = @p0;"
+params (prms)-
+Count = 1
+    [0]: {[@p0, 1]}
+
+get table-
+ReturnObject tbl = DAL.GetRecordset(new CommandParam(sql, prms), withFields: false);
+
+withFields: false : returns a record in JSON Array
+[
+     1,
+     1,
+     "Dev Plant",
+     "This  is just a test plant!!!",
+     75,
+     88750.0,
+     88750.0,
+     0.5,
+     2,
+     20.0,
+     1.0,
+     5.0,
+     0.0005,
+     0.5,
+     0.01,
+     100000.0,
+     10.0,
+     3000.0,
+     30.0,
+     null,
+     null,
+     "2017-01-29T09:40:40",
+     null
+]
+
+withFields: true : returns a record in  JSON Object
+{
+     "plnt_id": 1,
+     "plnt_ctry_id": 1,
+     "plnt_name": "Dev Plant",
+     "plnt_desc": "This  is just a test plant!!!",
+     "plnt_population": 75,
+     "plnt_area": 88750.0,
+     "plnt_area_pop": 88750.0,
+     "plnt_frac_pop": 0.5,
+     "plnt_pop_dens_lpd_id": 2,
+     "plnt_temp_amb": 20.0,
+     "plnt_press_atm": 1.0,
+     "plnt_cofst_ubsc": 5.0,
+     "plnt_cofst_lbsc": 0.0005,
+     "plnt_cofst_ubbc": 0.5,
+     "plnt_cofst_lbbc": 0.01,
+     "plnt_cofst_ubecg": 100000.0,
+     "plnt_cofst_lbecg": 10.0,
+     "plnt_cofst_ubecl": 3000.0,
+     "plnt_cofst_lbecl": 30.0,
+     "plnt_updated": null,
+     "plnt_updated_by": null,
+     "plnt_created": "2017-01-29T09:40:40"
+}
+
+post:
+http://soga-alv/NgArbi/api/app/plnt
+data-
+{
+	"_requestDate":"2020-04-13T16:42:42.196Z",
+	"plnt_id":1,
+	"plnt_name":"Dev Plant-up",
+	"plnt_desc":"This is just a test plant!!!2",
+	"plnt_population":"85"
+}
+sql-
+"update tbl_PlantData set [plnt_name] = @p0, [plnt_desc] = @p1, [plnt_population] = @p2 where [plnt_id] = @p3;"
+params-
+Count = 4
+    [0]: {[@p0, Dev Plant-up]}
+    [1]: {[@p1, This is just a test plant!!!2]}
+    [2]: {[@p2, 85]}
+    [3]: {[@p3, 1]}
+
+
+
+***************************************************************************************************
+Class DALTable
+****************************************************************************************************
+Constructor:
+public DALTable(
+            string tableName = "",
+            List<ColumnInfo> columns = null,
+            string description = "",
+            string tableCode = "",
+            string tableClassFilename = "",
+            string tableClass = "",
+            string tableRowClass = "",
+            string tableFieldPrefix = "",
+            JArray links = null,
+            JObject captions = null,
+            JArray tableLinks = null,
+            JObject tableLinksFields = null,
+            Dictionary<string, DALTable> tableCollection=null,
+            bool isLinkTable = false,
+            bool autoKey = true)
+
+==========================================================================================================
+Properties:
+==========================================================================================================
+public DateTime instantiated
+public string tableName
+public string tableFieldPrefix
+public string tableClassFilename
+public string tableClass
+public string tableRowClass
+public string tableCode
+public JArray links
+public JObject captions
+public JArray tableLinks
+public JObject tableLinksFields
+
+public string description
+public List<string> log
+public string templateString
+public string templateImports
+
+public string templateClass
+public bool autoKey
+public List<ColumnInfo> columns
+public Dictionary<string,ColumnInfo> columnsIndex
+public Dictionary<string, DALTable> tableCollection
+public List<ColumnInfo> keyCols
+public List<ColumnInfo> sortCols
+public List<ColumnInfo> groupCols
+public List<ColumnInfo> uniqueCols
+public Int64 NewAutoId
+public ColumnInfo keyCol
+public ColumnInfo grpCol
+public bool isDataTable
+public bool isLinkTable
+public string appDataPath
+public string appSchemaFile
+public string appTemplateFile
+
+*public string childSQL
+
+==========================================================================================================
+Methods:
+==========================================================================================================
+private void Initialize()
+private void CollectAllColumns()
+*private void GenerateTypeScriptSchema()
+*private void ExtractActualColumns()
+
+==========================================================================================================
+Functions:
+==========================================================================================================
+public string GetActionFromData(JObject data)
+public bool colExist(string name,Dictionary<string,ColumnInfo> index=null)
+private string MapDataTypeToTS(string dataType)
+private bool isFileExists(string file = "", string path = "")
+
+public ReturnObject Post(JArray values, JObject args = null)
+public List<ReturnObject> Get(JObject args = null, int objOrder = -1)
+
+public ColumnInfo GetColumnByName(string columnName)
+
+--------------------------------------------------------------------------------------------------------
+public string SQLText(
+            string mode = "fields",
+            int ctr = 0,
+            List<ColumnInfo> includeColumns = null,
+            List<ColumnInfo> whereColumns = null,
+            List<ColumnInfo> sortColumns = null,
+            bool noCond = false,
+            bool noSort = false,
+            bool byGroup = false,
+            bool fromInsert = false,
+            DALTable parentTable=null,
+            string parentField=null)
+
+- mode
+	"select"
+	"update"
+	"insert"
+--------------------------------------------------------------------------------------------------------
+
+public List<ColumnInfo> ColumnsFromIndices(string colIndices)
+public Dictionary<string, dynamic> BuildCommandParamsFromKeys(string keyVals, string keyIndices = "")
+public Dictionary<string, dynamic> BuildCommandParams(JObject args, List<ColumnInfo> cols)
+
+0-public ReturnObjectExternal SQLTest()
+0-public string GetSelectSQL()
+0-private string SQLGet()
+0-public Dictionary<string,dynamic> BuildUpdateParams(JObject values)
+
+==========================================================================================================
+Special Objects:
+==========================================================================================================
+AppTables[_g.KEY_TABLE_UPDATE_TRACK_CODE] - Referece to ChangeTracking DALTable object
+where _g.KEY_TABLE_UPDATE_TRACK_CODE = "chgTrack"
+
+
+***************************************************************************************************
+Class DALTableFieldParams
+****************************************************************************************************
+Constructor:
+public DALTableFieldParams(JObject data, 
+            DALStamps stamps,
+            DALTable table,
+            bool isUpdating = true,
+            List<ColumnInfo> keyFields = null)
+
+==========================================================================================================
+Properties:
+==========================================================================================================
+private DALStamps stamps
+private bool isUpdating
+private DALTable table
+public List<ColumnInfo> keyFields
+public string SQLText
+public List<ColumnInfo> columns
+public Dictionary<string, dynamic> parameters
+public Int64 tempNewId
+
+==========================================================================================================
+Methods:
+==========================================================================================================
+
+public void FormatData(JObject data, DALStamps stamps,bool reset = false)
+
+***************************************************************************************************
+Class DALTableLink
+****************************************************************************************************
+Constructor:
+public DALTableLink(string code,Dictionary<string,DALTable> tables,JObject args=null)
+
+==========================================================================================================
+Properties:
+==========================================================================================================
+public string code
+public string key
+public DALStamps stamps
+public DALStamps childStamps
+public DALTable table
+public string childCode
+public string childParentKey
+public bool hasChild
+
+
+***************************************************************************************************
+public class DALTableUpdateParams
+***************************************************************************************************
+Constructor:
+public DALTableUpdateParams(DALTable table, JObject data, JObject args = null)
+
+==========================================================================================================
+Properties:
+==========================================================================================================
+public List<ColumnInfo> fieldsToUpdate
+public ColumnInfo keyField
+public ColumnInfo stampField
+public Dictionary<string,dynamic> updateParams
+public List<CommandParam> trackCommandParams

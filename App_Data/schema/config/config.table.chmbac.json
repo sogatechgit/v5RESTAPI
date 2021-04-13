@@ -1,0 +1,21 @@
+{
+  "tableName": "IMSA_TBL_CHD_BAC_BAC",
+  "tableFieldPrefix": "CHD_BAC_BAC_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBBAC",
+  "links": [],
+  "tableRowClass": "TblChemDBBACRow",
+  "columns": [
+    {"name": "CHD_BAC_BAC_ID","keyPosition": 0},
+    {"name":"CHD_BAC_BAC_UPDATE_DATE","roles":"updated"},
+    {"name":"CHD_BAC_BAC_REC_TYPE","roles":"@lookupgroup=159"},
+  ],
+  "clientConfig":{
+		"keyField":"CHD_BAC_BAC_ID"
+  },
+  "captions": {
+    "CHD_BAC_BAC_ID": "ID"
+  },
+  "tableCode": "chmbac",
+  "description": "Chemical Database BAC-BAC Collection"
+}

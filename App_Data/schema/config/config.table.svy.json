@@ -1,0 +1,16 @@
+{
+    "tableName" : "IMSA_TBL_SVY_MAIN",
+    "tableFieldPrefix":"SVY_MAIN_",
+    "tableClassFilename":"",
+    "tableClass":"TblSurvey",
+    "links":[],
+    "tableRowClass":"TblSurveyRow",
+    "columns": [
+        {"name":"SVY_MAIN_ID","keyPosition":0}
+    ],
+	"clientConfig":{
+		"keyField":"SVY_MAIN_ID"},
+    "captions":{},
+    "tableCode":"svy",
+    "description":"Survey Campaign Collection"
+}

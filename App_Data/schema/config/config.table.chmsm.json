@@ -1,0 +1,16 @@
+{
+  "tableName": "IMSA_TBL_CHD_SUB_MODULES",
+  "tableFieldPrefix": "CHD_MOD_",
+  "tableClassFilename": "",
+  "tableClass": "TblChemDBSubModule",
+  "links": [],
+  "tableRowClass": "TblChemDBSubModuleRow",
+  "columns": [
+    {"name": "CHD_MOD_ID","type": "Int64","keyPosition": 0},
+  ],
+  "captions": {
+    "CHD_MOD_ID": "ID"
+  },
+  "tableCode": "chmsm",
+  "description": "Chemical Database Sub Module Collection"
+}

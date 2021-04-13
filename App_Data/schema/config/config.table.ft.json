@@ -1,0 +1,49 @@
+{
+    "tableName" : "IMSA_TBL_FAILURE_THREATS",
+    "tableFieldPrefix":"FT_",
+    "tableClassFilename":"",
+    "tableClass":"TblFailureThreats",
+    "links":[],
+	"tableDisplayA":"FT_CODE",
+	"tableDisplayB":"FT_NAME",
+	"relations":[],
+    "tableRowClass":"TblFailureThreatsRow",
+    "columns": [
+        {"name":"FT_ID","keyPosition":0},
+        {"name":"FT_GROUP","roles":"@lookupgroup=150"},
+        {"name":"FT_TYPE","roles":"@lookupgroup=151"},
+    ],
+	"clientConfig":{
+		"roles":"ft",
+		"lookupCode":"FT_CODE",
+		"lookupText":"FT_NAME",
+		"lookupGroup":"FT_GROUP",
+		"gridColumns":
+			[
+				"FT_CODE|cap=Code;center;wd=60",
+				"FT_NAME|cap=Name;mnw=150;mxw=200",
+				"FT_GROUP|cap=Group;mnw=150;mxw=200",
+				"FT_TYPE|cap=Type;mnw=250;mxw=300",
+				"FT_DESC|cap=Description;mnw=250",
+			],
+		"gridColumnsInAnomalies":
+			[
+				"FT_CODE|cap=Code;center;wd=60",
+				"FT_NAME|cap=Name;mnw=150;mxw=200",
+				"FT_GROUP|cap=Group;mnw=150;mxw=200",
+				"FT_TYPE|cap=Type;mnw=250",
+			],
+		"gridColumnsInSurvey":
+			[
+				"FT_CODE|cap=Code;center;wd=60",
+				"FT_NAME|cap=Name;mnw=150;mxw=200",
+				"FT_GROUP|cap=Group;mnw=150;mxw=200",
+				"FT_TYPE|cap=Type;mnw=250",
+				"FT_CORR_REL|cap=Corr Related;wd=80;center",
+			],
+	},
+    "captions":{
+    },
+    "tableCode":"ft",
+    "description":"Failure Threats Table"
+}
