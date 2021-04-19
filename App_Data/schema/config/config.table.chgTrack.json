@@ -1,12 +1,12 @@
 {
-    "tableName" : "tbl_ChangeTracker",
-    "tableFieldPrefix":"trk_",
+    "tableName" : "SYS_CHANGE_TRACKER",
+    "tableFieldPrefix":"TRK_",
     "tableClassFilename":"",
     "tableClass":"TblChangeTracker",
     "links":[],
     "tableRowClass":"TblChangeTrackerRow",
     "columns": [
-        {"name":"trk_id","type":"Int64","keyPosition":0}
+        {"name":"TRK_ID","keyPosition":0}
     ],
     "captions":{
     },

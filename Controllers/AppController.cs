@@ -381,30 +381,43 @@ namespace NgArbi.Controllers
 
                     // get collection of CommandParams per table
                     List<CommandParam> cmdsTemp = tbl.GetCommandParamsForPosting((JArray)jp.Value, args);
-                    CommandParam cmd1 = cmdsTemp[0];
-                    if (firstTable)
+                    if(cmdsTemp.Count !=0)
                     {
-                        // record first table record ids. 
-                        // iterate through the records' parameters
-
-                        if(cmd1.newKey != -1)
-                            // new record. populate tblCommonId with key id's of all commands
-                            cmdsTemp.ForEach(cmd => tblCommonId.Add(cmd.paramKeyValue));
-
-                        firstTable = false; // set first table flag to false after processing it
-                    } else
-                    {
-                        // if use common id,
-                        if (useCommonNewKey && cmd1.newKey != -1 && tblCommonId.Count!=0)
+                        // temporary list of parameters
+                        CommandParam cmd1 = cmdsTemp[0];
+                        if (firstTable)
                         {
-                            int ctr = 0;
-                            cmdsTemp.ForEach(cmd =>
-                            {
-                                cmd.cmdParams[DALData.PARAM_PREFIX + "p" + (int)cmd.paramKeyValuePosition] = tblCommonId[ctr];
-                                ctr++;
-                            });
+                            // record first table record ids. 
+                            // iterate through the records' parameters
+
+                            if (cmd1.newKey != -1)
+                                // new record. populate tblCommonId with key id's of all commands
+                                cmdsTemp.ForEach(cmd => tblCommonId.Add(cmd.paramKeyValue));
+
+                            firstTable = false; // set first table flag to false after processing it
                         }
+                        else
+                        {
+                            // if use common id,
+                            if (useCommonNewKey && cmd1.newKey != -1 && tblCommonId.Count != 0)
+                            {
+                                int ctr = 0;
+                                cmdsTemp.ForEach(cmd =>
+                                {
+                                    cmd.cmdParams[DALData.PARAM_PREFIX + "p" + (int)cmd.paramKeyValuePosition] = tblCommonId[ctr];
+                                    ctr++;
+                                });
+                            }
+                        }
+
                     }
+                    else
+                    {
+                        // this could signal that there are errors when GetCommandParamsForPosting
+                        // is called...
+                        string tempErr = "with error?";
+                    }
+
                     if (DALData.DAL.globalError.Length != 0)
                     {
                         // error has occured, therefore empty list is returned. handle error here
