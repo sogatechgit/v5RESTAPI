@@ -1,3 +1,8 @@
+Oracle:
+sys/system - prd:oracle
+sid: orcl
+
+
 Client:
 - Common popup content align messed up ...
 - Risk Ranking tab not displaying propery and causing runtime errors (might be affected by incorrect server request results)
