@@ -1,0 +1,7 @@
+Client:
+- Common popup content align messed up ...
+- Risk Ranking tab not displaying propery and causing runtime errors (might be affected by incorrect server request results)
+
+
+Server:
+- Possible error when getting risk matrix data...
