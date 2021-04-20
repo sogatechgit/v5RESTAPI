@@ -9,4 +9,12 @@ Client:
 
 
 Server:
-- Possible error when getting risk matrix data...
+- Possible error when getting risk matrix data...  solved
+
+- Related (link) Record post not working....
+- Anomaly Action Item list refresh sometimes fails to remove progress prompt....
+
+To Check:
+- Reference attachement file upload/link....
+- Asset selector not displaying tree nodes
+- Edit disabled while multi-select mode is active, however, when the selection is left to only a single record, edit function becomes available but edited record is the currently highlighted intead of the single selected record.
