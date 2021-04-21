@@ -2,13 +2,17 @@ Oracle:
 sys/system - prd:oracle
 sid: orcl
 
-
+====================================================================
 Client:
+
 Modified Methods in data-grid-b.component.ts
 HideMask() - added setTimeout
 Modified Methods in app-form-a.component.ts
 HideMask() - added setTimeout
 
+Entire TreeView component
+Entire LocationSelector component
+---------------------------------------------------------------------
 
 - Common popup content align messed up ...
 - Risk Ranking tab not displaying propery and causing runtime errors (might be affected by incorrect server request results)
