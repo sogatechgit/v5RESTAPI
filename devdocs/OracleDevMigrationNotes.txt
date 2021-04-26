@@ -14,8 +14,11 @@ Entire TreeView component
 Entire LocationSelector component
 ---------------------------------------------------------------------
 
-- Common popup content align messed up ...
-- Risk Ranking tab not displaying propery and causing runtime errors (might be affected by incorrect server request results)
+- (done) Common popup content align messed up ...
+- (done) Risk Ranking tab not displaying propery and causing runtime errors (might be affected by incorrect server request results)
+
+- sub-table new record creation messed up (dirty new record not detected) ...
+
 
 
 Server:
