@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_REFERENCE_FILES",
+    "tableName" : "TBL_REFERENCE_FILES",
     "tableFieldPrefix":"RF_",
     "tableClassFilename":"",
     "tableClass":"TblRefFiles",

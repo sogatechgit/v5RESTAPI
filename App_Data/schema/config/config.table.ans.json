@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_ANOM_MAIN_SUB",
+    "tableName" : "TBL_ANOM_MAIN_SUB",
     "tableFieldPrefix":"ANS_",
     "tableClassFilename":"",
     "tableClass":"TblAnomaliesSub",

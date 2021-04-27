@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_WQA",
+  "tableName": "TBL_CHD_WQA",
   "tableFieldPrefix": "CHD_WQA_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBwqa",

@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_DESIGN_DATA_MAIN",
+    "tableName" : "TBL_DESIGN_DATA_MAIN",
     "tableFieldPrefix":"DD_",
     "tableClassFilename":"",
     "tableClass":"TblDesignData",

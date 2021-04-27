@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_WHRU_WHRU",
+  "tableName": "TBL_CHD_WHRU_WHRU",
   "tableFieldPrefix": "CHD_WHRU_WHRU_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBwhru",

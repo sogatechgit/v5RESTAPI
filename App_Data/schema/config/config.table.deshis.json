@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_DESIGN_DATA_HISTORY",
+    "tableName" : "TBL_DESIGN_DATA_HISTORY",
     "tableFieldPrefix":"DD_HIST_",
     "tableClassFilename":"",
     "tableClass":"TblDesignDataHistory",

@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_SYS_TREE_STRUC",
+    "tableName" : "SYS_TREE_STRUC",
     "tableFieldPrefix":"TRE_",
     "tableClassFilename":"",
     "tableClass":"TblTreeStruc",

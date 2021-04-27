@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_SYS_NODES_ATTRIB",
+    "tableName" : "SYS_NODES_ATTRIB",
     "tableFieldPrefix":"NODE_",
     "tableClassFilename":"",
     "tableClass":"TblNodesAttrib",

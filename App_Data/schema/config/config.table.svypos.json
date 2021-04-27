@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_SVY_POSITION",
+    "tableName" : "TBL_SVY_POSITION",
     "tableFieldPrefix":"SVY_POS_",
     "tableClassFilename":"",
     "tableClass":"TblSurveyPosition",

@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_ANOM_ACT_ITEMS",
+    "tableName" : "TBL_ANOM_ACT_ITEMS",
     "tableFieldPrefix":"AI_",
     "tableClassFilename":"",
     "tableClass":"TblAnomaliesAction",
@@ -18,6 +18,10 @@
 		"subTable":{},
 
 		"dataGroup":"AI_AN_ID",		
+		
+		"deletedFlagField":"AI_DELETED",
+		"deletedDateStamp":"AI_DELETED_DATE",
+		"deletedByStamp":"AI_DELETED_BY",		
 		
 		"createdDateStamp":"AI_RAISED_DATE",
 		"createdByStamp":"AI_RAISED_BY",

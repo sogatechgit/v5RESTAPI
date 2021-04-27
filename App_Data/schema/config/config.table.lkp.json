@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_SYS_LOOKUPS",
+    "tableName" : "SYS_LOOKUPS",
     "tableFieldPrefix":"LKP_",
     "tableClassFilename":"",
     "tableClass":"TblLookups",

@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_COUP_CORR",
+  "tableName": "TBL_CHD_COUP_CORR",
   "tableFieldPrefix": "CHD_COUP_CORR_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBcorr",

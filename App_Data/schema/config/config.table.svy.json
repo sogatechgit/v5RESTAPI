@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_SVY_MAIN",
+    "tableName" : "TBL_SVY_MAIN",
     "tableFieldPrefix":"SVY_MAIN_",
     "tableClassFilename":"",
     "tableClass":"TblSurvey",

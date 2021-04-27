@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_COUP_SCALE",
+  "tableName": "TBL_CHD_COUP_SCALE",
   "tableFieldPrefix": "CHD_COUP_SC",
   "tableClassFilename": "",
   "tableClass": "TblChemDBscale",

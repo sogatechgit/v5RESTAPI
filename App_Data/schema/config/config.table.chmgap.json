@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_GAP",
+  "tableName": "TBL_CHD_GAP",
   "tableFieldPrefix": "CHD_GAP_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBGAP",

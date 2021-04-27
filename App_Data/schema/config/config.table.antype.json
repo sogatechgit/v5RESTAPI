@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_ANOM_TYPES",
+    "tableName" : "TBL_ANOM_TYPES",
     "tableFieldPrefix":"ANTYPE_",
     "tableClassFilename":"",
     "tableClass":"TblAnomalyTypes",

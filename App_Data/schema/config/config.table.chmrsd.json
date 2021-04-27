@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_CHEM_RSD",
+  "tableName": "TBL_CHD_CHEM_RSD",
   "tableFieldPrefix": "CHD_CHEM_RSD_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBrsd",

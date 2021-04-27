@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_CHD_HEADER",
+    "tableName" : "TBL_CHD_HEADER",
     "tableFieldPrefix":"CHD_HDR_",
     "tableClassFilename":"",
     "tableClass":"TblChemDBHeader",

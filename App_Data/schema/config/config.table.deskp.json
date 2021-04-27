@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_DESIGN_DATA_KP",
+    "tableName" : "TBL_DESIGN_DATA_KP",
     "tableFieldPrefix":"DD_KP_",
     "tableClassFilename":"",
     "tableClass":"TblDesignDataKP",

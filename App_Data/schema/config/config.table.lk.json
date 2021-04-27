@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_SYS_LOCKS",
+    "tableName" : "SYS_LOCKS",
     "tableFieldPrefix":"LOCK_",
     "tableClassFilename":"",
     "tableClass":"SysLocks",

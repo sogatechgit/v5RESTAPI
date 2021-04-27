@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_QRY_REFERENCE_LINKS",
+    "tableName" : "QRY_REFERENCE_LINKS",
     "tableFieldPrefix":"RFL_",
     "tableClassFilename":"",
     "tableClass":"QryRefLinks",

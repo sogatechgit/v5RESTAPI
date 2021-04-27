@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_SUB_MODULES",
+  "tableName": "TBL_CHD_SUB_MODULES",
   "tableFieldPrefix": "CHD_MOD_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBSubModule",

@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_BAC_BAC",
+  "tableName": "TBL_CHD_BAC_BAC",
   "tableFieldPrefix": "CHD_BAC_BAC_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBBAC",

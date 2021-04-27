@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_GLY",
+  "tableName": "TBL_CHD_GLY",
   "tableFieldPrefix": "CHD_GLY_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBglycol",

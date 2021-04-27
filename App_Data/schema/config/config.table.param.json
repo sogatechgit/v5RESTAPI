@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_USER_PARAMS",
+    "tableName" : "TBL_USER_PARAMS",
     "tableFieldPrefix":"USER_PARAM_",
     "tableClassFilename":"",
     "tableClass":"TblUserParam",

@@ -1,5 +1,5 @@
 {
-  "tableName": "IMSA_TBL_CHD_CHEM_QUAL",
+  "tableName": "TBL_CHD_CHEM_QUAL",
   "tableFieldPrefix": "CHD_CHEM_QUAL_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBQUAL",

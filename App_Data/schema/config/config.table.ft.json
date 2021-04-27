@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_FAILURE_THREATS",
+    "tableName" : "TBL_FAILURE_THREATS",
     "tableFieldPrefix":"FT_",
     "tableClassFilename":"",
     "tableClass":"TblFailureThreats",

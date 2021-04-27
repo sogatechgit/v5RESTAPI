@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_USERS",
+    "tableName" : "TBL_USERS",
     "tableFieldPrefix":"USER_",
     "tableClassFilename":"",
     "tableClass":"TblUsers",

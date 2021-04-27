@@ -1,5 +1,5 @@
 {
-    "tableName" : "IMSA_TBL_DESIGN_DATA_PARAMS",
+    "tableName" : "TBL_DESIGN_DATA_PARAMS",
     "tableFieldPrefix":"DD_PARAM_",
     "tableClassFilename":"",
     "tableClass":"TblDesignDataParams",
