@@ -17,6 +17,7 @@
 		"roles":"nodes,lookup",
 		"lookupCode":"NODE_ID",
 		"lookupText":"NODE_DESC",
+		"pipelineIds":"9640,6413,9607,9615"
     },
     "captions":{
     },
