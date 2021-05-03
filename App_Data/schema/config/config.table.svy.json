@@ -9,7 +9,14 @@
         {"name":"SVY_MAIN_ID","keyPosition":0}
     ],
 	"clientConfig":{
-		"keyField":"SVY_MAIN_ID"},
+		"keyField":"SVY_MAIN_ID",
+		"gridColumns":
+			[
+				"SVY_MAIN_TITLE|cap=Campaign",
+				"SVY_MAIN_DATE_START|cap=Start Date;wd=87",
+				"SVY_MAIN_DATE_END|cap=End Date;wd=87",
+			],		
+	},
     "captions":{},
     "tableCode":"svy",
     "description":"Survey Campaign Collection"

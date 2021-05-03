@@ -10,7 +10,7 @@
     ],
 	"clientConfig":{
 		"keyField":"SVY_EVT_ID"
-  },
+	},
     "captions":{
 		"SVY_EVT_ID":"ID",
 		"SVY_EVT_DESC":"Event Type",
