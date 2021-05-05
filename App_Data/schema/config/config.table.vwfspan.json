@@ -1,0 +1,23 @@
+{
+    "tableName" : "QRY_SPANS_HEADER",
+    "tableFieldPrefix":"SP_",
+    "tableClassFilename":"",
+    "tableClass":"QrySpansHeader",
+    "links":[],
+    "tableRowClass":"QrySpansHeaderRow",
+    "columns": [
+        {"name":"SP_ID","keyPosition":0},
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"SP_ID",
+		
+		"gridColumns":
+			[
+				"SP_KS|cap=Start Kp;center;wd=80",
+				"SP_KE|cap=End Kp;center;wd=80",
+			],			
+	},
+    "tableCode":"vwfspan",
+    "description":"Freespan survey data"
+}
