@@ -9,8 +9,12 @@
         {"name":"SVY_EVT_ID","keyPosition":0}
     ],
 	"clientConfig":{
-		"keyField":"SVY_EVT_ID"
-	},
+		"keyField":"SVY_EVT_ID",
+		"gridColumns":
+			[
+				"SVY_EVT_DESC|cap=Event;mnw=150"
+			],
+  },
     "captions":{
 		"SVY_EVT_ID":"ID",
 		"SVY_EVT_DESC":"Event Type",

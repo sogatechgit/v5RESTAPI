@@ -1,5 +1,5 @@
 {
-  "tableName": "TBL_CHD_OWA",
+  "tableName": "IMSA_TBL_CHD_OWA",
   "tableFieldPrefix": "CHD_OWA_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBowa",

@@ -1,5 +1,5 @@
 {
-  "tableName": "TBL_CHD_HFA",
+  "tableName": "CHD_HFA",
   "tableFieldPrefix": "CHD_HFA_",
   "tableClassFilename": "",
   "tableClass": "TblChemDBHFA",
