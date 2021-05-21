@@ -1,0 +1,23 @@
+{
+    "tableName" : "QRY_SPANS_CAMPAIGNS",
+    "tableFieldPrefix":"SCP_",
+    "tableClassFilename":"",
+    "tableClass":"QrySpansCampaign",
+    "links":[],
+    "tableRowClass":"QrySpansCampaignRow",
+    "columns": [
+        {"name":"SCP_ID","keyPosition":0},
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"SCP_ID",
+		
+		"gridColumns":
+			[
+				"SCP_TITLE|cap=Campaign",
+				"SCP_PERIOD|cap=Period;center;wd=200",
+			],			
+	},
+    "tableCode":"vwcspan",
+    "description":"Freespan Campaigns"
+}

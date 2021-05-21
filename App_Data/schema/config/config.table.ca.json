@@ -1,0 +1,57 @@
+{
+    "tableName" : "QRY_TBL_CA",
+    "tableFieldPrefix":"CA_",
+    "tableClassFilename":"",
+    "tableClass":"TblCompliance",
+    "tableRowClass":"TblComplianceRow",
+    "links":[],
+    "tableDisplayA":"",
+    "tableDisplayB":"",
+    "relations":[
+		{"local_field":"CA_REC_TAG", "foreign_code":"node","foreign_field":"REC_TAG", "type":"lkp"}
+    ],
+    "columns": [
+        {"name":"CA_ID","keyPosition":0},
+        {"name":"CA_REC_TAG","roles":""},    
+        {"name":"CA_TASK_FREQ","roles":"@lookupgroup=254;@map=CTF"},
+        {"name":"CA_TASK_TYPE","roles":"@lookupgroup=252;@map=CTT"},
+		{"name":"CA_DEV_NEEDED","roles":"@lookupswitch=YN-"},
+		{"name":"CA_SCE","roles":"@lookupswitch=YN-"},
+		
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"CA_ID",
+		"assetField":"CA_REC_TAG",
+		"deletedFlagField":"CA_DELETED",
+		"deletedDateStamp":"CA_DELETED_DATE",
+		"deletedByStamp":"CA_DELETED_BY",
+		"updatedDateStamp":"CA_UPD_DATE",
+		"updatedByStamp":"CA_UPD_BY",
+	    "gridColumns":
+			[
+				"CA_REC_TAG|cap=Asset;mnw=150",
+				"CA_SCE|cap=SCE;wd=60;center",
+				"CA_TASK_REF|cap=Task Reference;wd=90",
+				"CA_TASK_DESC|cap=Task Description;wd=120",
+				"CA_TASK_FREQ|cap=Task Frequency;wd=90;center",
+				"CA_TASK_TYPE|cap=Task Type;wd=70;center",
+				"CA_LAST_DATE|cap=Last Date;wd=80",
+				"CA_HRS_NEEDED|cap=Hours Needed;wd=80;center",
+				"CA_LAST_DATE|cap=Last Date;wd=90",
+				"CA_TARGET_DATE|cap=Target Date;wd=90",
+				"CA_NEXT_TARGET_DATE|cap=Next to Target Date;wd=90",
+				"CA_LAFD|cap=LAPD;wd=70",
+			]
+			},
+    "captions":{
+			"CA_ID":"ID",
+			"CA_REC_TAG":"Asset",
+			"CA_TASK_FREQ":"Task Frequency",
+			"CA_TASK_TYPE":"Task Type",
+			"CA_DEV_NEEDED":"Deviation Needed",
+			"CA_SCE":"SCE"
+    },
+    "tableCode":"ca",
+    "description":"Compliance Module"
+}
