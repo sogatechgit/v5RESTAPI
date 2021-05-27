@@ -1,0 +1,20 @@
+{
+    "tableName" : "TBL_SEISMIC",
+    "tableFieldPrefix":"SIS_",
+    "tableClassFilename":"",
+    "tableClass":"TblSeismic",
+    "links":[],
+    "tableRowClass":"TblSeismicRow",
+    "columns": [
+        {"name":"SIS_REFNO","keyPosition":0},
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"SIS_REFNO",
+		
+		"gridColumns":
+			[],			
+	},
+    "tableCode":"sis",
+    "description":"Seismic Data"
+}
