@@ -176,6 +176,12 @@ namespace NgArbi.Controllers
             {
                 ret.Add("size", fi.Length);
                 ret.Add("modified", fi.LastWriteTime);
+                if(fi.Extension.ToLower() == ".asx")
+                {
+                    // extract information from the content of the file
+                    // href, start, duration, title
+                    ret.Add("asxtext", File.ReadAllText(fi.FullName));
+                }
             }else
             {
                 // 
