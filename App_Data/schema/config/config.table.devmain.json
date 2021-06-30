@@ -1,10 +1,10 @@
 {
-    "tableName" : "DEV_TBLDEVMAIN",
+    "tableName" : "DEV_QRYDEVMAIN",
     "tableFieldPrefix":"",
     "tableClassFilename":"",
-    "tableClass":"TblDevMain",
+    "tableClass":"QryDevMain",
     "links":[],
-    "tableRowClass":"TblDevMainRow",
+    "tableRowClass":"QryDevMainRow",
     "columns": [
         {"name":"DEVID","keyPosition":0},
     ],
