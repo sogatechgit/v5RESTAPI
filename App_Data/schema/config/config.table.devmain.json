@@ -1,0 +1,25 @@
+{
+    "tableName" : "DEV_TBLDEVMAIN",
+    "tableFieldPrefix":"",
+    "tableClassFilename":"",
+    "tableClass":"TblDevMain",
+    "links":[],
+    "tableRowClass":"TblDevMainRow",
+    "columns": [
+        {"name":"DEVID","keyPosition":0},
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"DEVID",
+		
+		"dataGroup":"",	
+		
+		"gridColumns":
+			[
+				"REFCODE|cap=Ref. Code;center;wd=100",
+				"DEVTITLE|cap=Title;mnw=150",
+			],			
+	},
+    "tableCode":"devmain",
+    "description":"DevCon Main Table"
+}
