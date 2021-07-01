@@ -12,12 +12,10 @@
 		"roles":"",
 		"keyField":"DEVID",
 		
-		"dataGroup":"",	
-		
 		"gridColumns":
 			[
-				"REFCODE|cap=Ref. Code;center;wd=100",
-				"DEVTITLE|cap=Title;mnw=150",
+				"REFNUM|cap=Ref.No.;center;wd=100",
+				"DEVTITLE|cap=Title;mnw=200",
 			],			
 	},
     "tableCode":"devmain",
