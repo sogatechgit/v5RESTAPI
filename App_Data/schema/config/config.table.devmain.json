@@ -15,7 +15,14 @@
 		"gridColumns":
 			[
 				"REFNUM|cap=Ref.No.;center;wd=100",
-				"DEVTITLE|cap=Title;mnw=200",
+				"DEVTITLE|cap=Title;mnw=120",
+				"ASSET|cap=Asset;mnw=100",
+				"STATUS|cap=Status;center;wd=80",
+				"RAISEDATE|cap=Raised;center;wd=80",
+				"APPROVED|cap=Approved;center;wd=80",
+				"CLOSED|cap=Closed;center;wd=100",
+				"DSTSTATUS|cap=Current Status;center;wd=110",
+				"RESPONSIBLE|cap=Responsible;wd=110",
 			],			
 	},
     "tableCode":"devmain",
