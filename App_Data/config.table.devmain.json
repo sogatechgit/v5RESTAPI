@@ -1,0 +1,30 @@
+{
+    "tableName" : "DEV_QRYDEVMAIN",
+    "tableFieldPrefix":"",
+    "tableClassFilename":"",
+    "tableClass":"QryDevMain",
+    "links":[],
+    "tableRowClass":"QryDevMainRow",
+    "columns": [
+        {"name":"DEVID","keyPosition":0},
+    ],
+	"clientConfig":{
+		"roles":"",
+		"keyField":"DEVID",
+		
+		"gridColumns":
+			[
+				"REFNUM|cap=Ref.No.;center;wd=100",
+				"DEVTITLE|cap=Title;mnw=120",
+				"ASSET|cap=Asset;mnw=100",
+				"RSCLSTAT|cap=Status;center;wd=80",
+				"RAISEDATE|cap=Raised;center;wd=80",
+				"APPROVED|cap=Approved;center;wd=80",
+				"CLOSED|cap=Closed;center;wd=100",
+				"STATUS|cap=Current Status;center;wd=110",
+				"RESPONSIBLE|cap=Responsible;wd=110",
+			],			
+	},
+    "tableCode":"devmain",
+    "description":"DevCon Main Table"
+}
