@@ -6,11 +6,10 @@
     "links":[],
     "tableRowClass":"QryDevMainRow",
     "columns": [
-        {"name":"DEVID","keyPosition":0},
-    ],
+		{"name":"DEVID","keyPosition":0},
+	],
 	"clientConfig":{
 		"roles":"",
-		"keyField":"DEVID",
 		
 		"gridColumns":
 			[
@@ -23,7 +22,13 @@
 				"CLOSED|cap=Closed;center;wd=100",
 				"STATUS|cap=Current Status;center;wd=110",
 				"RESPONSIBLE|cap=Responsible;wd=110",
+			],
+		"gridColumnsSummaryA":
+			[
+				"DSTSTATUS|cap=Status;center;wd=200",
+				"count(DEVID)@TOTAL|cap=Total;wd=100",
 			],			
+
 	},
     "tableCode":"devmain",
     "description":"DevCon Main Table"
