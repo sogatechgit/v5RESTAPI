@@ -23,7 +23,21 @@
 				"STATUS|cap=Current Status;center;wd=110",
 				"RESPONSIBLE|cap=Responsible;wd=110",
 			],
-		"gridColumnsSummaryA":
+		"gridColumnsTest":
+			[
+				"STATUSCODE@CODE|cap=Code;center;wd=80",
+				"DSTSTATUS|cap=Status;left;mnw=200",
+				"count(DEVID)@TOTAL|cap=Total;wd=100",
+			],
+		"gridColumnsTest-X":
+			[
+				"REFNUM|cap=Ref.No.;center;wd=100",
+				"DEVTITLE|cap=Title;mnw=120",
+				"ASSET|cap=Asset;mnw=100",
+				"RSCLSTAT|cap=Status;center;wd=80",
+				"RAISEDATE|cap=Raised;center;wd=80",
+			],
+		"gridColumnsStatsSummary":
 			[
 				"DSTSTATUS|cap=Status;center;wd=200",
 				"count(DEVID)@TOTAL|cap=Total;wd=100",
